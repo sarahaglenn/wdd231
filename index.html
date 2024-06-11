@@ -7,34 +7,47 @@
     <meta name="description" content="Home page for WDD 231">
     <meta name="author" content="Sarah Glenn">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <script src="scripts/home.js" defer></script>
 </head>
 <body>
-    <header><h1>WDD 231 - Sarah Glenn</h1></header>
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active" title="Home">Home</a></li>
-            <li><a href="#" title="Chamber">Chamber/a></li>
-            <li><a href="#" title="GitHub Profile">GitHub Profile</a></li>
-            <li><a href="https://www.linkedin.com/in/sarah-glenn-895284246" title="LinkedIn">LinkedIn</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>WDD 231 - Sarah Glenn</h1> 
+        <a id="menu" aria-label="Menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="active" title="Home">Home</a></li>
+                <li><a href="#" title="Chamber">Chamber</a></li>
+                <li><a href="#" title="GitHub Profile">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/sarah-glenn-895284246" title="LinkedIn">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section>
+        <section id="courseWork">
             <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </section>
         <section>
             <h2>Skellefteå, Sweden</h2>
             <figure>
-                <img src="images/skelleftea.jpg" alt="Skellefteå River and city center">
+                <img src="images/skelleftea.jpg" alt="Skellefteå River and city center" width="400" height="246">
                 <figcaption>Skellefteå River</figcaption>
             </figure>
         </section>
-        <section>
+        <section id="courses">
             <h2>Web and Computer Programming Certificate</h2>
-            <p id="all">All</p>
-            <p id="cse">CSE</p>
-            <p id="wdd">WDD</p>
+            <div id="labels">
+                <p id="all">All</p>
+                <p id="cse">CSE</p>
+                <p id="wdd">WDD</p>
+            </div>
             <hr>
             <div id="cards"></div>
             <p id="credits"></p>

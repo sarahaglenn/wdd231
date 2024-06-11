@@ -5,6 +5,8 @@ const navAll = document.querySelector("#all");
 const navCSE = document.querySelector("#cse");
 const navWDD = document.querySelector("#wdd");
 const credits = document.querySelector("#credits");
+const mainnav = document.querySelector('.navigation');
+const hambutton = document.querySelector('#menu');
 
 year.innerHTML = today.getFullYear();
 modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-UK",{dateStyle: "short"}).format(today)}`;
@@ -89,6 +91,10 @@ const courses = [
     }
 ]
 
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});
 navAll.addEventListener('click', () => {
     generateCourseCards(courses);
 });
@@ -101,14 +107,16 @@ navWDD.addEventListener('click', () => {
     generateCourseCards(wddCourses);
 });
 function generateCourseCards(filteredCourses) {
-    const courseHTML = filteredCourses.map((course) =>
-    `<section>
-    <h3>${course.subject} ${course.number}
-    </section>`
-    );
+    const courseHTML = filteredCourses.map((course) => {
+        if (course.completed == true) {
+            return `<h3 class="completed">${course.subject} ${course.number}</h3>`
+        } else {
+            return `<h3>${course.subject} ${course.number}</h3>`
+        }
+    });
     document.querySelector("#cards").innerHTML = courseHTML.join('');
 }
 generateCourseCards(courses);
-credits.innerHTML = courses.reduce(function (acc, course) {
+credits.innerHTML = `Total credits required: ${courses.reduce(function (acc, course) {
     return acc + course.credits;
-}, 0);
+}, 0)}`;
