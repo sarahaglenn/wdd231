@@ -12,17 +12,23 @@ h1 {
     text-align: center;
     padding: 1rem;
 }
-header {
-    text-align: center;
-    align-items: center;
+.head {
+    display: inline-flex;
+    align-items: end;
+    min-height: 160px;
+}
+.head img {
+    margin: .5rem;
+    border-radius: 25%;
+    box-shadow: 3px 1px 3px lightgray;
 }
 h2 {
     text-align: center;
+    font-weight: 100;
     padding: 1rem;
     background-color: #93BEDF;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin: .5rem;
 }
 body {
     margin: 1rem auto;
@@ -73,16 +79,22 @@ nav li:hover {
     content: "🆇";
     font-size: 1.5rem;
 }
+section {
+    border: 1px solid rgba(128, 128, 128, 0.493);
+    border-radius: 20px;
+    margin: .5rem;
+    box-shadow: 7px 5px 7px gray;
+}
 #courseWork li {
     list-style-type: "☑️";
-    margin: 20px 0 0 50px;
+    margin: 20px 0 20px 50px;
 }
 figure {
     text-align: center;
     padding: 1rem;
     margin: 0 auto;
 }
-img {
+figure img {
     margin: 0 auto;
 }
 #labels {
