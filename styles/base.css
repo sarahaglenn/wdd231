@@ -142,6 +142,9 @@ footer {
 
 
 @media (min-width: 669px) {
+    nav {
+        text-align: center;
+    }
     nav ul {
         display: flex;
     }
