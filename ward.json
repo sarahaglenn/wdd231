@@ -1,0 +1,28 @@
+{
+    "familyName": "Smith",
+    "moveInDate": "2012-04-23",
+    "numberOfPeople": 4,
+    "wasVisited": true,
+    "familyMembers": [
+        {
+            "name": "Susan Smith",
+            "gender": "F",
+            "birthdate": "1982-12-15"
+        },
+        {
+            "name": "Bob Smith",
+            "gender": "M",
+            "birthdate": "1983-11-5"
+        },
+        {
+            "name": "Ricky Smith",
+            "gender": "M",
+            "birthdate": "2018-10-2"
+        },
+        {
+            "name": "Charles Smith",
+            "gender": "M",
+            "birthdate": "2020-6-1"
+        }
+    ]
+}
