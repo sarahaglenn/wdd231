@@ -1,0 +1,38 @@
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+header, main, footer {
+    margin: 1rem;
+    position: relative;
+}
+h1, h2 {
+    text-align: center;
+    color: rebeccapurple;
+}
+nav, footer {
+    text-align: center;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+section {
+    margin: .25rem;
+    padding: .3rem;
+    background-color: violet;
+    border: 1px solid rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p {
+    margin: 0;
+    padding-bottom: .25rem;
+}
+img {
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 10px;
+}
+.active {
+    background-color: darkgray;
+}
