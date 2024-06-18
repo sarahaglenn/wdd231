@@ -7,7 +7,7 @@ header, main, footer {
 }
 h1, h2 {
     text-align: center;
-    color: rebeccapurple;
+    color: #245a3b;
 }
 nav, footer {
     text-align: center;
@@ -19,8 +19,8 @@ nav, footer {
 section {
     margin: .25rem;
     padding: .3rem;
-    background-color: violet;
-    border: 1px solid rebeccapurple;
+    background-color: #b7c0eecb;
+    border: 1px solid #7067CF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,5 +34,10 @@ img {
     box-shadow: 3px 3px 10px;
 }
 .active {
-    background-color: darkgray;
+    background-color: #b7c0eecb;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+button {
+    padding: .3rem;
 }
