@@ -9,6 +9,9 @@ h1, h2 {
     text-align: center;
     color: #245a3b;
 }
+button:hover {
+    cursor: pointer;
+}
 nav, footer {
     text-align: center;
 }

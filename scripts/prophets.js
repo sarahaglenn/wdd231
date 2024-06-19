@@ -79,8 +79,6 @@ const displayProphets = (prophets) => {
     });
 }
 
-filterProphets();
-
 function getAgeInYears(birthdate, deathdate) {
     let birth = new Date(birthdate);
     let death = new Date(deathdate);
