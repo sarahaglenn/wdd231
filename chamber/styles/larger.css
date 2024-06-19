@@ -1,0 +1,16 @@
+@media only screen and (min-width: 38rem) {
+    #hamButton {
+        display: none;
+    }
+    nav {
+        grid-template-rows: 1fr;
+    }
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul.menuLinks a:hover {
+        background-color: var(--lightest-color);
+    }
+}

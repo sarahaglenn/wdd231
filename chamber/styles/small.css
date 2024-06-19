@@ -1,0 +1,63 @@
+:root {
+    --dark-color: #03045E;
+    --medium-color: #0077B6;
+    --lighter-color: #00B4D8;
+    --light-color: #90E0EF;
+    --lightest-color: #CAF0F8;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: var(--light-color);
+}
+
+#hamButton::before {
+    content: "\2630"
+}
+
+#hamButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    position: absolute;
+    text-align: left;
+    padding: .25rem 1vw;
+    top: 0;
+    right: 2vw;
+}
+
+ul.menuLinks li a {
+    display: block;
+    padding: .75rem 2vw;
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+li.active a {
+    background-color: var(--lighter-color);
+}
+
+ul.menuLinks {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+}
+#hamButton.open::before {
+    content: "x";
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav ul {
+    overflow: hidden;
+}
+nav.open {
+    grid-template-rows: 1fr;
+}
