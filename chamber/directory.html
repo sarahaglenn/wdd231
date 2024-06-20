@@ -6,73 +6,93 @@
     <title>Umeå Chamber of Commerce</title>
     <meta name="description" content="Bringing together and advocating for local businesses.">
     <meta name="author" content="Sarah Glenn">
-    <!-- Update the content for social media meta!!!! -->
-    <meta property="og:title" content="Umeå Chamber of Commerce">
+    <meta property="og:title" content="Umeå Chamber of Commerce Home">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-    <meta property="og:image:alt" content="">
+    <meta property="og:image" content="images/ume-chamber-of-commerce-logo-zip-file/png/logo-no-background.png">
+    <meta property="og:image:alt" content="Business fronts along a street">
     <meta property="og:url" content="https://www.sarahaglenn/github.io/wdd231/chamber">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:description" content="Bringing together local business owners">
+    <meta property="og:site_name" content="Umeå Chamber of Commerce">
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="" />
+    <meta name="twitter:site" content="Umeå Chamber of Commerce" />
     <meta name="twitter:title" content="Umeå Chamber of Commerce" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:image:alt" content="">
+    <meta name="twitter:description" content="Bringing together local business owners" />
+    <meta name="twitter:image" content="images/ume-chamber-of-commerce-logo-zip-file/png/logo-no-background.png" />
+    <meta name="twitter:image:alt" content="Business fronts along a street">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap" rel="stylesheet">
     <script src="scripts/chamber.js" defer></script>
-    <link rel="icon" href="umea-sun-mountains.ico">    
+    <link rel="icon" href="images/anchor.ico">    
 </head>
 <body>
     <header>
-        <img src="images/android-chrome-512x512.png" alt="Logo for Umeå Chamber of Commerce" width="100" >
-        <h1>Umeå</h1>
-        <h2>Chamber of Commerce</h2>
-        <nav id="animate">
-            <button id="hamButton"></button>
-            <ul class="menuLinks">
-                <li class="active"><a href="#" title="home">Home</a></li>
-                <li><a href="#" title="directory">Directory</a></li>
-                <li><a href="#" title="join">Join</a></li>
-                <li><a href="#" title="discover">Discover</a></li>
-            </ul>
-        </nav>
+        <img src="images/ume-chamber-of-commerce-logo-zip-file/png/logo-no-background.png" alt="Logo for Umeå Chamber of Commerce" width="400" >
+        <!-- <h1>Umeå</h1>
+        <h2>Chamber of Commerce</h2> -->
     </header>
+    <nav id="animate">
+        <button id="hamButton"></button>
+        <ul class="menuLinks">
+            <li class="active"><a href="#" title="home">Home</a></li>
+            <li><a href="#" title="directory">Directory</a></li>
+            <li><a href="#" title="join">Join</a></li>
+            <li><a href="#" title="discover">Discover</a></li>
+        </ul>
+    </nav>
     <div class="hero">
-        <img src="" alt="hero image">
-        <button>Keynote Tickets</button>
+        <img src="images/umea1600x500.webp" alt="Street of business fronts">
+        <button>Convention Registration</button>
     </div>
     <main>
         <h1 class="home">Home</h1>
-        <section class="events">
-            <h2>Events</h2>
-        </section>
-        <section class="weather">
-            <h2>Current Weather</h2>
-        </section>  
-        <section class="forecast">
-            <h2>Weather Forecast</h2>
-        </section>
+        <div class="info">
+            <section class="events">
+                <h2>Events</h2>
+            </section>
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weatherInfo">
+                    <img src="images/clouds.png" alt="sun behind clouds" width="100" height="100">
+                    <div class="weatherStats">
+                        <p>22°C</p>
+                        <p>Partly Cloudy</p>
+                        <p>High: 25°</p>
+                        <p>Low: 18°</p>
+                        <p>Humidity: 34%</p>
+                        <p>Sunrise: 01:32</p>
+                        <p>Sunset: 23:34</p>
+                    </div>
+                </div>
+            </section>  
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <p>Today: 25°C</p>
+                <p>Friday: 28°C</p>
+                <p>Saturday: 20°C</p>
+            </section>
+        </div>
+        <hr>
         <div class="menu">
-            <button id="view">📋List View</button>
+            <button id="view">&#9776</button>
         </div>
         <div id="cards"></div>
     </main>
     <footer>
         <section class="contact">
             <h4>Umeå Chamber of Commerce</h4>
-            <p>address info line one</p>
-            <p>address info line two</p>
-            <p>email info</p>
-            <p>phone number</p>
+            <p>8 Storgatan</p>
+            <p>Umeå, Sweden</p>
+            <p>info@umeacommerce.com</p>
+            <p>070-905 8763</p>
         </section>
-        <div class="social">
-            <img src="" alt="Facebook icon">
-            <img src="" alt="Twitter icon">
-            <img src="" alt="LinkedIn icon">
+        <div id="social">
+            <a href="#"><img src="images/facebook-icon.png" alt="Facebook icon" width="48" height="48"></a>
+            <a href="#"><img src="images/twitter-icon.png" alt="Twitter icon" width="48" height="48"></a>
+            <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn icon" width="48" height="48"></a>
         </div>
         <div class="wdd231">
             <p>WDD231 Class Project</p>

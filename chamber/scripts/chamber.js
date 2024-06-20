@@ -30,18 +30,20 @@ getMemberData();
 const displayMembers = (members) => {
     members.forEach((member) => {
         let card = document.createElement('section');
-        let name = document.createElement('p');
+        let name = document.createElement('h3');
         let logo = document.createElement('img');
         let address = document.createElement('p');
         let phone= document.createElement('p');
-        let website = document.createElement('p');
+        let website = document.createElement('a');
         name.textContent = `${member.businessName}`;
         address.innerHTML = `${member.streetAddress} <br> ${member.city}, ${member.country}`;
         phone.textContent = `${member.phone}`;
-        website.textContent = `${member.url}`;
+        website.href = `${member.url}`;
+        website.innerHTML = `${member.url}`;
         logo.setAttribute('src', member.logo);
-        logo.setAttribute('alt', `Logo for ${member.businessName}.`);
+        logo.setAttribute('alt', `Logo for ${member.businessName}`);
         logo.setAttribute('loading', 'lazy');
+        logo.setAttribute('height', '100');
         card.appendChild(logo);
         card.appendChild(name);
         card.appendChild(address);
@@ -52,15 +54,14 @@ const displayMembers = (members) => {
 }
 // toggle between grid and list view
 const viewButton = document.querySelector('#view');
-// const listButton = document.querySelector('#list');
 
 viewButton.addEventListener('click', () => {
     if (cards.classList.contains("list")) {
         cards.classList.remove("list");
-        viewButton.textContent = `📋List View`;
+        viewButton.innerHTML = `&#9776`;
     }
     else {
         cards.classList.add("list");
-        viewButton.textContent = `🔳Grid View`;
+        viewButton.innerHTML = `&#5010&#5010&#5010`;
     }
 });

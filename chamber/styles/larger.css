@@ -13,4 +13,18 @@
     ul.menuLinks a:hover {
         background-color: var(--lightest-color);
     }
+    .info {
+        display: grid;
+        grid-template-columns: 2fr 1.2fr 1fr;
+        column-gap: 10px;
+    }
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
 }

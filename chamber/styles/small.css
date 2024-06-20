@@ -5,6 +5,27 @@
     --light-color: #90E0EF;
     --lightest-color: #CAF0F8;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+main {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+/* Header */
+header {
+    margin: 1rem;
+    overflow: hidden;
+}
+header img {
+    float: left;
+    margin: .25rem;
+}
+
 
 /* NAVIGATION BAR */
 nav {
@@ -31,7 +52,7 @@ nav {
 ul.menuLinks li a {
     display: block;
     padding: .75rem 2vw;
-    color: var(--dark-color);
+    color: black;
     text-decoration: none;
 }
 
@@ -60,4 +81,141 @@ nav ul {
 }
 nav.open {
     grid-template-rows: 1fr;
+}
+/* Hero Banner */
+.hero {
+    position: relative;
+}
+.hero img {
+    max-width: 100%;
+    margin: auto;
+}
+.hero button {
+    position: absolute;
+    right: .3em;
+    bottom: 1em;
+    padding: .4em;
+    background-image: linear-gradient(to bottom right, var(--lightest-color), var(--light-color));
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px lightgray;
+}
+.home {
+    color: var(--dark-color);
+    font-weight: 400;
+    margin-left: .25em;
+}
+/* EVENTS AND WEATHER SECTIONS */
+.events,
+.weather,
+.forecast {
+    background-color: var(--lightest-color);
+    min-height: 100px;
+}
+div.weatherInfo {
+    display:flex;
+    place-content: start;
+    padding: .5em;
+}
+.weatherInfo img {
+    margin: .3em .5em;
+    background-color: #03055e69;
+    border-radius: 5px;
+}
+
+div.weatherStats p {
+    padding: .2em;
+}
+
+section h2 {
+    text-align: center;
+    background-color: var(--dark-color);
+    color: white;
+    font-weight: 100;
+    padding: .25em;
+}
+.forecast p {
+    max-width: 100%;
+    padding: .4em;
+    margin-left: .25em;
+}
+hr {
+    margin-top: 2em;
+}
+
+/* BUSINESS CARDS */
+
+.menu button {
+    margin: .5em;
+    font-size: 2em;
+    padding: .1em;
+    min-width: 50px;
+}
+
+#cards section {
+    border-radius: 3px;
+    margin: .75em auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 2px 3px 5px 5px gray;
+    min-width: 260px;
+    max-width: 300px;
+    padding: .5em;
+}
+#cards img {
+    height: 120px;
+    width: auto;
+}
+
+#cards a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+#cards.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+#cards.list section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    margin: 0;
+    padding: .25rem 0;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+    margin: .5em auto;
+    min-width: 100%;
+    align-items: center;
+}
+
+#cards.list section > * {
+    margin: 0 1rem;
+}
+#cards.list section img {
+    display: none;
+}
+#cards.list section h3 {
+    font-size: 1rem;
+}
+#cards.list section:nth-child(even) {
+    background-color: #03055e1d;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 1em;
+    background-color: var(--light-color);
+    padding: .3em;
+}
+.contact {
+    margin: .5em;
+}
+#social {
+    text-align: center;
+}
+#social img {
+    display: inline-block;
 }

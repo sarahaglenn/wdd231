@@ -1,74 +1,74 @@
 {
     "members": [
         {
-            "businessName": "Really Cool Business",
+            "businessName": "Cykel & Fiskecenter",
             "streetAddress": "354 Nygatan",
             "city": "Umeå",
             "country": "Sweden",
             "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
+            "url": "cykelochfiskecenter.se",
+            "logo": "https://i.postimg.cc/TPRq3n9N/logo-color.png",
             "membership": 1
         },
         {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
-            "city": "Umeå",
+            "businessName": "Gödishuset",
+            "streetAddress": "2 Notvägen",
+            "city": "Öbacka",
             "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
+            "phone": "+46 70-987 7493",
+            "url": "godishuset.se",
+            "logo": "https://i.postimg.cc/G26XtH9B/godishuset-logo.png",
+            "membership": 2
+        },
+        {
+            "businessName": "Ainas Café",
+            "streetAddress": "45 Tegsvägen",
+            "city": "Sofiehem",
+            "country": "Sweden",
+            "phone": "+46 70-656 2343",
+            "url": "ainascafe.se",
+            "logo": "https://i.postimg.cc/XNF8xNp8/ainas-logo.png",
             "membership": 1
         },
         {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
+            "businessName": "Scandic Umeå",
+            "streetAddress": "16 Vintergatan",
+            "city": "Röbäck",
+            "country": "Sweden",
+            "phone": "+46 70-786 0634",
+            "url": "scandichotel/umea.se",
+            "logo": "https://i.postimg.cc/xdcGmnwL/scandic-logo.png",
+            "membership": 3
+        },
+        {
+            "businessName": "Hemmakväll",
+            "streetAddress": "3 Långgatan",
             "city": "Umeå",
             "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
+            "phone": "+46 70-533 2465",
+            "url": "hemmakvall.se",
+            "logo": "https://i.postimg.cc/GmSGd64t/hemmakvall-logo.png",
             "membership": 1
         },
         {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
-            "city": "Umeå",
+            "businessName": "Bilverkstan Älvsbacka",
+            "streetAddress": "28 Ringvägen",
+            "city": "Mariehem",
             "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
+            "phone": "+46 70-746 8822",
+            "url": "bilverstanalvsbacka.se",
+            "logo": "https://i.postimg.cc/509VgKm5/bilverkstan-logo.png",
             "membership": 1
         },
         {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
+            "businessName": "Pinchos",
+            "streetAddress": "54 Kläppvägen",
             "city": "Umeå",
             "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
-            "membership": 1
-        },
-        {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
-            "city": "Umeå",
-            "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
-            "membership": 1
-        },
-        {
-            "businessName": "Really Cool Business",
-            "streetAddress": "354 Nygatan",
-            "city": "Umeå",
-            "country": "Sweden",
-            "phone": "+46 70-809 9801",
-            "url": "awesomebusiness.coolstuff.se",
-            "logo": "https://placehold.co/100",
-            "membership": 1
+            "phone": "+46 70-722 5466",
+            "url": "pinchos.se",
+            "logo": "https://i.postimg.cc/FHjX4XWg/pinchos-logo.png",
+            "membership": 2
         }
     ]
 }
