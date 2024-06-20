@@ -13,7 +13,7 @@
 }
 main {
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 95%;
 }
 
 /* Header */
@@ -87,7 +87,8 @@ nav.open {
     position: relative;
 }
 .hero img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     margin: auto;
 }
 .hero button {
@@ -104,6 +105,7 @@ nav.open {
     color: var(--dark-color);
     font-weight: 400;
     margin-left: .25em;
+    font-size: 1.6em;
 }
 /* EVENTS AND WEATHER SECTIONS */
 .events,
@@ -141,6 +143,7 @@ section h2 {
 }
 hr {
     margin-top: 2em;
+    border: 1px solid var(--dark-color);
 }
 
 /* BUSINESS CARDS */
@@ -169,7 +172,6 @@ hr {
 
 #cards a {
     color: var(--dark-color);
-    text-decoration: none;
 }
 
 #cards.list {
