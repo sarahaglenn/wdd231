@@ -2,7 +2,7 @@
     "members": [
         {
             "businessName": "Cykel & Fiskecenter",
-            "streetAddress": "354 Nygatan",
+            "streetAddress": "Nygatan 354",
             "city": "Umeå",
             "country": "Sweden",
             "phone": "+46 70-809 9801",
@@ -12,7 +12,7 @@
         },
         {
             "businessName": "Gödishuset",
-            "streetAddress": "2 Notvägen",
+            "streetAddress": "Notvägen 2",
             "city": "Öbacka",
             "country": "Sweden",
             "phone": "+46 70-987 7493",
@@ -22,7 +22,7 @@
         },
         {
             "businessName": "Ainas Café",
-            "streetAddress": "45 Tegsvägen",
+            "streetAddress": "Tegsvägen 45",
             "city": "Sofiehem",
             "country": "Sweden",
             "phone": "+46 70-656 2343",
@@ -32,7 +32,7 @@
         },
         {
             "businessName": "Scandic Umeå",
-            "streetAddress": "16 Vintergatan",
+            "streetAddress": "Vintergatan 16",
             "city": "Röbäck",
             "country": "Sweden",
             "phone": "+46 70-786 0634",
@@ -42,7 +42,7 @@
         },
         {
             "businessName": "Hemmakväll",
-            "streetAddress": "3 Långgatan",
+            "streetAddress": "Långgatan 3",
             "city": "Umeå",
             "country": "Sweden",
             "phone": "+46 70-533 2465",
@@ -52,7 +52,7 @@
         },
         {
             "businessName": "Bilverkstan Älvsbacka",
-            "streetAddress": "28 Ringvägen",
+            "streetAddress": "Ringvägen 28",
             "city": "Mariehem",
             "country": "Sweden",
             "phone": "+46 70-746 8822",
@@ -62,7 +62,7 @@
         },
         {
             "businessName": "Pinchos",
-            "streetAddress": "54 Kläppvägen",
+            "streetAddress": "Kläppvägen 54",
             "city": "Umeå",
             "country": "Sweden",
             "phone": "+46 70-722 5466",
