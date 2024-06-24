@@ -24,6 +24,7 @@ header {
 header img {
     float: left;
     margin: .25rem;
+    width: 60%;
 }
 
 
