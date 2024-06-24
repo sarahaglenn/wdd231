@@ -97,6 +97,26 @@ figure {
 figure img {
     margin: 0 auto;
 }
+#weather {
+    text-align: center;
+}
+#weather p {
+    margin-top: 1em;
+}
+#weather p::before {
+    content: "Temperature: ";
+}
+#weather img {
+    background-color: #93bedf82;
+}
+#weather figure {
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+#weather-caption {
+    text-transform: capitalize;
+}
 #labels {
     display: flex;
     text-align: center;
@@ -111,7 +131,7 @@ figure img {
     margin: 5px auto;
 }
 #labels p:hover {
-    cursor: grab;
+    cursor: pointer;
 }
 
 #cards {
@@ -152,6 +172,33 @@ footer {
         display: block;
         flex: 1 1 100%;
     }
+    main {
+        position: relative;
+    }
+    #weather {
+        position:absolute;
+        top: 35%;
+        right: 2%;
+        background-color: rgba(255, 255, 255, 0.77);
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    #weather h2 {
+        background-color: #f4989daa;
+        padding: .2em;
+        border-radius: 0;
+    }
+    #weather p {
+        margin: .2em;
+    }
+    #weather p::before {
+        content: "";
+    }
+    #weather img {
+        display: none;
+    }
+
     #menu {
         display: none;
     }
