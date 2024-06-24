@@ -28,3 +28,8 @@
         place-items: center;
     }
 }
+@media only screen and (min-width: 57rem) {
+    header img {
+        width: 45%;
+    }
+}
