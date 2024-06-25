@@ -52,8 +52,8 @@ async function apiFetch(url, displayFunction) {
 function displayCurrentWeather(data) {
     const temp = document.createElement('p');
     const description = document.createElement('p');
-    const high = document.createElement('p');
-    const low = document.createElement('p');
+    const highandlow = document.createElement('p');
+    // const low = document.createElement('p');
     // const sunrise = document.createElement('p');
     // const sunset = document.createElement('p');
     
@@ -64,19 +64,21 @@ function displayCurrentWeather(data) {
     weatherIcon.setAttribute('alt', alt);
     description.textContent = `${alt}`;
     description.setAttribute('id', 'desc');
-    high.innerHTML = `High: <strong>${Math.round(data.main.temp_max)}°C</strong>`;
-    low.innerHTML = `Low: <strong>${Math.round(data.main.temp_min)}°C</strong>`;
+    temp.setAttribute('id', 'temp');
+    highandlow.innerHTML = `High: <strong>${Math.round(data.main.temp_max)}°C</strong> Low: <strong>${Math.round(data.main.temp_min)}°C</strong>`;
+    // low.innerHTML = `Low: <strong>${Math.round(data.main.temp_min)}°C</strong>`;
     currentWeather.appendChild(temp);
     currentWeather.appendChild(description);
-    currentWeather.appendChild(high);
-    currentWeather.appendChild(low);
+    currentWeather.appendChild(weatherIcon);
+    currentWeather.appendChild(highandlow);
+    // currentWeather.appendChild(low);
 }
 
 function displayForecast(data)  {
     const todayTemp = document.createElement('p');
     const tomorrowTemp = document.createElement('p');
     const nextTemp = document.createElement('p');
-    todayTemp.innerHTML = `Temp: <strong>${Math.round(data.list[0].main.temp)}°C</strong>`;
+    todayTemp.innerHTML = `Today: <strong>${Math.round(data.list[0].main.temp)}°C</strong>`;
     const tomorrow = new Date(data.list[8].dt_txt);
     const nextDay = new Date(data.list[16].dt_txt);
     console.log((tomorrow.getDay()));
@@ -89,3 +91,42 @@ function displayForecast(data)  {
 }
 apiFetch(weatherURL, displayCurrentWeather);
 apiFetch(forecastURL, displayForecast);
+
+const cards = document.querySelector('#cards');
+const filename = 'data/members.json';
+
+async function getMemberData() {
+    const response = await fetch(filename);
+    if (response.ok) {
+        const data = await response.json()
+        // console.table(data.members);
+        displayMembers(data.members);
+    }
+}
+getMemberData();
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+        if (member.membership === 3) {
+            let card = document.createElement('section');
+            let name = document.createElement('h3');
+            let logo = document.createElement('img');
+            let address = document.createElement('p');
+            let phone= document.createElement('p');
+            let website = document.createElement('a');
+            name.textContent = `${member.businessName}`;
+            address.innerHTML = `${member.streetAddress} <br> ${member.city}, ${member.country}`;
+            phone.textContent = `${member.phone}`;
+            website.href = `${member.url}`;
+            website.innerHTML = `${member.url}`;
+            logo.setAttribute('src', member.logo);
+            logo.setAttribute('alt', `Logo for ${member.businessName}`);
+            logo.setAttribute('loading', 'lazy');
+            logo.setAttribute('height', '100');
+            card.appendChild(logo);
+            card.appendChild(name);
+            card.appendChild(website);
+            cards.appendChild(card);
+        }
+    });
+}

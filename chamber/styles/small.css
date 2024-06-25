@@ -94,16 +94,16 @@ nav.open {
 }
 .hero button {
     position: absolute;
-    right: .3em;
+    right: 1em;
     bottom: 1em;
     padding: .3em;
     background-image: linear-gradient(to top left, rgb(255, 47, 0), rgb(255, 200, 0));
     /* background-image: linear-gradient(to bottom right, var(--lightest-color), var(--light-color)); */
     border: 1px solid gray;
     border-radius: 5px;
-    box-shadow: 1px 1px 5px lightgray;
+    box-shadow: 1px 1px 5px rgb(11, 82, 11);
 }
-.home {
+h1 {
     color: var(--dark-color);
     font-weight: 400;
     margin-left: .25em;
@@ -116,19 +116,30 @@ nav.open {
     background-color: var(--lightest-color);
     min-height: 100px;
 }
+ul {
+    margin-left: 1.5em;
+    list-style-type:square;
+}
+#events li {
+    padding: .6em;
+}
 div.weatherInfo {
-    display:flex;
-    place-content: start;
+    /* display:flex;
+    place-content: start; */
     padding: .5em;
+    text-align: center;
+}
+#temp {
+    font-size: 1.2em;
 }
 .weatherInfo img {
-    margin: .3em .5em;
+    margin: auto;
     background-color: #03055e69;
     border-radius: 5px;
 }
 
 div.weatherStats p {
-    padding: .2em;
+    padding: .4em;
 }
 #desc {
     text-transform: capitalize;
@@ -152,7 +163,12 @@ hr {
 }
 
 /* BUSINESS CARDS */
-
+#spotlight {
+    text-align: center;
+    margin: 1em;
+    color: var(--dark-color);
+    font-weight: 400;
+ }
 .menu button {
     margin: .5em;
     font-size: 2em;
