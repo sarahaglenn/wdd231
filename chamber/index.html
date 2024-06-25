@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umeå Chamber of Commerce Directory</title>
-    <meta name="description" content="Directory of local businesses.">
+    <title>Umeå Chamber of Commerce</title>
+    <meta name="description" content="Bringing together local businesses.">
     <meta name="author" content="Sarah Glenn">
-    <meta property="og:title" content="Umeå Chamber of Commerce Directory">
+    <meta property="og:title" content="Umeå Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://sarahaglenn.github.io/wdd231//chamber/images/storefronts1600x500.webp">
+    <meta property="og:image" content="https://sarahaglenn.github.io/wdd231//chamber/images/umea1600x500.webp">
     <meta property="og:image:alt" content="Business fronts along a street">
     <meta property="og:url" content="https://www.sarahaglenn/github.io/wdd231/chamber">
     <meta property="og:description" content="Bringing together local business owners">
-    <meta property="og:site_name" content="Umeå Chamber of Commerce Directory">
+    <meta property="og:site_name" content="Umeå Chamber of Commerce">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="Umeå Chamber of Commerce Directory">
-    <meta name="twitter:title" content="Umeå Chamber of Commerce Directory">
+    <meta name="twitter:site" content="Umeå Chamber of Commerce">
+    <meta name="twitter:title" content="Umeå Chamber of Commerce">
     <meta name="twitter:description" content="Bringing together local business owners">
     <meta name="twitter:image" content="images/umea1600x500.webp">
     <meta name="twitter:image:alt" content="Business fronts along a street">
@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap"
         rel="stylesheet">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/index.js" defer></script>
     <link rel="icon" href="images/anchor.ico">
 </head>
 
@@ -39,21 +39,34 @@
     <nav id="animate">
         <button id="hamButton" aria-label="Menu Button"></button>
         <ul class="menuLinks">
-            <li><a href="index.html" title="home">Home</a></li>
-            <li class="active"><a href="#" title="directory">Directory</a></li>
+            <li class="active"><a href="#" title="home">Home</a></li>
+            <li><a href="directory.html" title="directory">Directory</a></li>
             <li><a href="#" title="join">Join</a></li>
             <li><a href="#" title="discover">Discover</a></li>
         </ul>
     </nav>
     <div class="hero">
-        <img src="images/storefronts1600x500.webp" alt="Street of business fronts" width="1600" height="500">
+        <img src="images/umea1600x500.webp" alt="Street of business fronts" width="1600" height="500">
+        <button>Register for 2024 Convention</button>
     </div>
     <main>
-        <h1 class="directory">Business Directory</h1>
-        <div class="menu">
-            <button id="view">&#9776;</button>
+        <h1 class="home">Home</h1>
+        <div class="info">
+            <section class="events">
+                <h2>Events</h2>
+            </section>
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weatherInfo">
+                    <img id="weatherIcon" src="" alt="" width="100" height="100">
+                    <div class="weatherStats">
+                    </div>
+                </div>
+            </section>
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+            </section>
         </div>
-        <div id="cards"></div>
     </main>
     <footer>
         <section class="contact">

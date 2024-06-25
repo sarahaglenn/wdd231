@@ -13,6 +13,14 @@
     ul.menuLinks a:hover {
         background-color: var(--lightest-color);
     }
+    header img {
+        width: 50%;
+    }
+    section h2 {
+        display: flex;
+        min-height: 3em;
+        align-items: center;
+    }
     .info {
         display: grid;
         grid-template-columns: 2fr 1.2fr 1fr;
@@ -30,6 +38,6 @@
 }
 @media only screen and (min-width: 57rem) {
     header img {
-        width: 45%;
+        width: 40%;
     }
 }
