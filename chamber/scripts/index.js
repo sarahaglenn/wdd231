@@ -40,7 +40,7 @@ async function apiFetch(url, displayFunction) {
         console.log(error);
     }
 }
-// Sunrise and sunset from weather API is only 1 minute difference
+
 // function msToTimeString(ms) {
 //     let date = Date(ms);
 //     let hours = date.getHours();
