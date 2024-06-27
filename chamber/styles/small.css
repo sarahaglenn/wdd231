@@ -97,8 +97,8 @@ nav.open {
     right: 1em;
     bottom: 1em;
     padding: .3em;
-    background-image: linear-gradient(to top left, rgb(255, 47, 0), rgb(255, 200, 0));
-    /* background-image: linear-gradient(to bottom right, var(--lightest-color), var(--light-color)); */
+    /* background-image: linear-gradient(to top left, rgb(255, 47, 0), rgb(255, 200, 0)); */
+    background-image: linear-gradient(to bottom right, var(--light-color), var(--lighter-color));
     border: 1px solid gray;
     border-radius: 5px;
     box-shadow: 1px 1px 5px rgb(11, 82, 11);

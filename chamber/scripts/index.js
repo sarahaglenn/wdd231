@@ -16,14 +16,13 @@ hamButton.addEventListener('click', () => {
 
 // Weather Info
 const currentWeather = document.querySelector('.weatherStats');
-const weatherIcon = document.getElementById('weatherIcon');
 const forecast = document.querySelector(".forecast");
 
 const lat = "64.75";
 const long = "20.95";
 const key = "2026cc9883490e04a8412142d4da0c5d";
-const weatherURL = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${key}`;
-const forecastURL = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${key}`;
+const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${key}`;
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=${key}`;
 
 async function apiFetch(url, displayFunction) {
     try {
@@ -58,10 +57,14 @@ function displayCurrentWeather(data) {
     // const sunset = document.createElement('p');
     
     temp.innerHTML = `Temp: <strong>${Math.round(data.main.temp)}°C</strong>`;
-    const iconSRC = `//openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    const iconSRC = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     let alt = data.weather[0].description;
+    const weatherIcon = document.createElement('img');
     weatherIcon.setAttribute('src', iconSRC);
     weatherIcon.setAttribute('alt', alt);
+    weatherIcon.setAttribute('width', "100");
+    weatherIcon.setAttribute('height', "100");
+    weatherIcon.setAttribute('id', "weatherIcon");
     description.textContent = `${alt}`;
     description.setAttribute('id', 'desc');
     temp.setAttribute('id', 'temp');
