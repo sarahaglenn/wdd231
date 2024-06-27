@@ -30,7 +30,7 @@ async function apiFetch(url, displayFunction) {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data);
+            // console.log(data);
             displayFunction(data);
         } else {
             throw Error(await response.text());
@@ -81,7 +81,6 @@ function displayForecast(data)  {
     todayTemp.innerHTML = `Today: <strong>${Math.round(data.list[0].main.temp)}°C</strong>`;
     const tomorrow = new Date(data.list[8].dt_txt);
     const nextDay = new Date(data.list[16].dt_txt);
-    console.log((tomorrow.getDay()));
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     tomorrowTemp.innerHTML = `${days[tomorrow.getDay()]}: <strong>${Math.round(data.list[8].main.temp)}°C</strong>`;
     nextTemp.innerHTML = `${days[nextDay.getDay()]}: <strong>${Math.round(data.list[16].main.temp)}°C</strong>`;
@@ -92,7 +91,7 @@ function displayForecast(data)  {
 apiFetch(weatherURL, displayCurrentWeather);
 apiFetch(forecastURL, displayForecast);
 
-const cards = document.querySelector('#cards');
+const cards = document.querySelector('#spotlight');
 const filename = 'data/members.json';
 
 async function getMemberData() {
@@ -100,33 +99,32 @@ async function getMemberData() {
     if (response.ok) {
         const data = await response.json()
         // console.table(data.members);
-        displayMembers(data.members);
+        displaySpotlights(data.members);
     }
 }
-getMemberData();
+
+const displaySpotlights = (members) => {
+    const spotlights = members.filter((member) => member.membership === 3 || member.membership === 2);
+    const randomSpotlights = shuffleArray(spotlights);
+    displayMembers(randomSpotlights.slice(0,2));
+    }
+
+const shuffleArray = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
 
 const displayMembers = (members) => {
     members.forEach((member) => {
-        if (member.membership === 3) {
-            let card = document.createElement('section');
-            let name = document.createElement('h3');
-            let logo = document.createElement('img');
-            let address = document.createElement('p');
-            let phone= document.createElement('p');
-            let website = document.createElement('a');
-            name.textContent = `${member.businessName}`;
-            address.innerHTML = `${member.streetAddress} <br> ${member.city}, ${member.country}`;
-            phone.textContent = `${member.phone}`;
-            website.href = `${member.url}`;
-            website.innerHTML = `${member.url}`;
-            logo.setAttribute('src', member.logo);
-            logo.setAttribute('alt', `Logo for ${member.businessName}`);
-            logo.setAttribute('loading', 'lazy');
-            logo.setAttribute('height', '100');
-            card.appendChild(logo);
-            card.appendChild(name);
-            card.appendChild(website);
-            cards.appendChild(card);
-        }
-    });
+            let logo = document.createElement('a');
+            logo.setAttribute('href', member.url);
+            logo.innerHTML = `<img src=${member.logo} alt="logo for ${member.businessName}" height="120" loading="lazy">`;
+            cards.appendChild(logo);   
+        });
 }
+getMemberData();

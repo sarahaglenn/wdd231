@@ -163,11 +163,22 @@ hr {
 }
 
 /* BUSINESS CARDS */
-#spotlight {
+.spotlight {
     text-align: center;
     margin: 1em;
     color: var(--dark-color);
     font-weight: 400;
+ }
+ #spotlight a {
+    margin: .75em auto;
+    text-align: center;
+    display: block;
+ }
+ #spotlight img {
+    border-radius: 45%;
+ }
+ #spotlight img:hover {
+    box-shadow: rgba(42, 34, 88, 0.208) 20px 48px 100px 20px;
  }
 .menu button {
     margin: .5em;

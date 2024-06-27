@@ -43,7 +43,7 @@ const displayMembers = (members) => {
         logo.setAttribute('src', member.logo);
         logo.setAttribute('alt', `Logo for ${member.businessName}`);
         logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('height', '100');
+        logo.setAttribute('height', '120');
         card.appendChild(logo);
         card.appendChild(name);
         card.appendChild(address);
