@@ -5,8 +5,8 @@ const navAll = document.querySelector("#all");
 const navCSE = document.querySelector("#cse");
 const navWDD = document.querySelector("#wdd");
 const credits = document.querySelector("#credits");
-const mainnav = document.querySelector('.navigation');
-const hambutton = document.querySelector('#menu');
+const hambutton = document.querySelector('#hamButton');
+const navLinks = document.querySelector('#animate');
 
 year.innerHTML = today.getFullYear();
 modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-UK",{dateStyle: "short"}).format(today)}`;
@@ -92,7 +92,7 @@ const courses = [
 ]
 
 hambutton.addEventListener('click', () => {
-    mainnav.classList.toggle('show');
+    navLinks.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
 navAll.addEventListener('click', () => {

@@ -35,47 +35,50 @@ body {
     max-width: 1300px;
     min-width: 340px;
 }
-.active {
-    background-color: #fcbcbf;
-}
-nav a:hover {
-    color: white;
-    font-weight: 700;
-    background-color: #d3656bdf;
-}
-
-#menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-#menu::before {
-    content: "≡";
-    font-size: 2.5rem;
-}
-#menu.show::before {
-    content: "🆇";
-    font-size: 1.5rem;
-}
 nav {
     background-color: #f4989de6;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
 }
-nav a, #menu {
+#hamButton::before {
+    content: "\2630";
+}
+#hamButton.show::before {
+    content: "🆇";
+}
+#hamButton {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 44px;
+    position: absolute;
+    top: 0;
+    right: 2vw;
+}
+ul.menuLinks li a {
     display: block;
-    text-decoration: none;
+    padding: .75rem 2vw;
     color: black;
-    padding: 1rem;
+    text-decoration: none;
 }
-ul {
-    list-style-type: none;
+.active {
+    background-color: #fcbcbf;
 }
-nav li {
-    display: none;
+
+nav ul {
+    overflow: hidden;
 }
-.show li {
-    display: block;
+nav.show {
+    grid-template-rows: 1fr;
+}
+ul.menuLinks a:hover {
+    color: white;
+    font-weight: 700;
+    background-color: #d3656bdf;
 }
 section {
     border: 1px solid rgba(128, 128, 128, 0.493);
@@ -179,9 +182,10 @@ dialog h3 {
     margin: 0;
     margin-bottom: .4rem;
     font-weight: 100;
+    max-width: none;
 }
 dialog p {
-    padding: 1rem;
+    padding: 1.2rem;
 }
 
 ::backdrop {
@@ -207,10 +211,14 @@ footer {
 
 
 @media (min-width: 669px) {
+    #hamButton {
+        display: none;
+    }
     nav {
         text-align: center;
+        grid-template-rows: 1fr;
     }
-    nav ul {
+    ul.menuLinks, ul.menuLinks.show {
         display: flex;
     }
     nav ul li {
@@ -241,10 +249,6 @@ footer {
         content: "";
     }
     #weather img {
-        display: none;
-    }
-
-    #menu {
         display: none;
     }
     main {
