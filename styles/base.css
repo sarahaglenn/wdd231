@@ -84,6 +84,7 @@ section {
     border-radius: 20px;
     margin: .5rem;
     box-shadow: 7px 5px 7px gray;
+    min-width: fit-content;
 }
 #courseWork li {
     list-style-type: "☑️";
@@ -151,6 +152,23 @@ h3 {
 .completed {
     background-color: rgb(152, 226, 189);
 }
+
+dialog {
+    border: 1px solid #93bedf43;
+    background-color: white;
+}
+
+dialog::backdrop {
+    filter: blur(8px);
+}
+.close-button {
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 #credits {
     padding: 1rem;
 }

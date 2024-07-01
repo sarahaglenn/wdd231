@@ -109,17 +109,44 @@ navWDD.addEventListener('click', () => {
 function generateCourseCards(filteredCourses) {
     const courseHTML = filteredCourses.map((course) => {
         if (course.completed == true) {
-            return `<h3 class="completed">${course.subject} ${course.number}</h3>`
+            
+            return `<div class="courseDiv"><h3 class="completed">${course.subject} ${course.number}</h3></div>`
         } else {
-            return `<h3>${course.subject} ${course.number}</h3>`
+            return `<div class="courseDiv"><h3>${course.subject} ${course.number}</h3></div>`
         }
-    });
+        }
+    );
     document.querySelector("#cards").innerHTML = courseHTML.join('');
+    const courses = document.querySelectorAll(".courseDiv");
+    courses.addEventListener('click', () => {
+        displayCourseDetails(course);
+    })
 }
 generateCourseCards(courses);
 credits.innerHTML = `Total credits required: ${courses.reduce(function (acc, course) {
     return acc + course.credits;
 }, 0)}`;
+
+// MODAL
+const courseDetails = document.querySelector('dialog');
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = 
+    `<button class="closeButton">❌</button>
+    <h2><strong>Course: </strong>${course.subject} ${course.number}</h2>
+    <h3><strong>Title: </strong>${course.title}</h3>
+    <p><strong>Credits: </strong>${course.credits}</p>
+    <p><strong>Description: </strong>${course.description}</p>
+    <p><strong>Certificate: </strong>${course.certificate}</p>
+    <p><strong>Technologies: </strong>${course.technology}</p>
+    `
+    courseDetails.showModal();
+
+    closeButton.addEventListener('click', () => {
+        couseDetails.close();
+    });
+}
 
 // WEATHER CARD
 const temp = document.getElementById('current-temp');
