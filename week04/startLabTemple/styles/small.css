@@ -1,0 +1,27 @@
+*{box-sizing: border-box;}
+
+dialog {
+    padding: 0;
+}
+
+dialog div {
+    background-color: lightgray;
+    border-bottom: 1px solid gray;
+    display: grid;
+    grid-template-columns: auto 44px;
+}
+h2 {
+    margin: 0;
+    color: rgb(52, 105, 252);
+    padding: .2rem;
+}
+dialog p {
+    padding: 1rem;
+}
+button {
+    box-shadow: 0 0 10px rgb(183, 182, 182);
+    padding: .2rem;
+}
+::backdrop {
+    background-color: rgb(183, 182, 182, 0.5);
+}

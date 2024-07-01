@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
-  <title>Single Dialog Example</title>
+  <title>Web Lab Start File</title>
 </head>
 
 <body>
@@ -27,14 +27,18 @@
   </nav>
 
   <main>
-    <h1>Reuse one dialog over and over</h1>
-    <button id="openButton1">Apples</button>
-    <button id="openButton2">Oranges</button>
-    <button id="openButton3">Bananas</button>
-    <dialog id="dialogBox">
-    <div></div>
-    <button id="closeButton">Close</button>
+    <h1>Temples</h1>
+	<div id="showHere"></div>
+	
+    <!-- One single dialog for all temples -->
+    <dialog id="mydialog">
+      <div>
+        <h2>Sample Title</h2>
+        <button>X</button>
+      </div>
+      <p></p>
     </dialog>
+
 
   </main>
 
@@ -42,6 +46,6 @@
     <p>&copy; Web Labs</p>
   </footer>
 
-  <script src="js/scripts.js"></script>
+  <script src="js/scripts.js" type="module"></script>
 </body>
 </html>
