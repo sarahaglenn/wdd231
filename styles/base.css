@@ -35,19 +35,28 @@ body {
     max-width: 1300px;
     min-width: 340px;
 }
-.active::before {
-    content: "📍";
+.active {
+    background-color: #fcbcbf;
 }
+nav a:hover {
+    color: white;
+    font-weight: 700;
+    background-color: #d3656bdf;
+}
+
 #menu {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
 }
 #menu::before {
     content: "≡";
     font-size: 2.5rem;
 }
-
+#menu.show::before {
+    content: "🆇";
+    font-size: 1.5rem;
+}
 nav {
     background-color: #f4989de6;
     max-width: 1200px;
@@ -67,17 +76,6 @@ nav li {
 }
 .show li {
     display: block;
-}
-nav a:hover {
-    color: white;
-    font-weight: 700;
-}
-nav li:hover {
-    background-color: #d3656bdf;
-}
-#menu.show::before {
-    content: "🆇";
-    font-size: 1.5rem;
 }
 section {
     border: 1px solid rgba(128, 128, 128, 0.493);
