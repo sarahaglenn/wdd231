@@ -60,7 +60,9 @@ ul.menuLinks li a {
 li.active a {
     background-color: var(--lighter-color);
 }
-
+ul.menuLinks a:hover {
+    background-color: var(--lightest-color);
+}
 ul.menuLinks {
     padding: 0;
     margin: 0;
