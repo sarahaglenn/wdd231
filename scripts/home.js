@@ -106,46 +106,56 @@ navWDD.addEventListener('click', () => {
     let wddCourses = courses.filter((course) => course.subject === "WDD");
     generateCourseCards(wddCourses);
 });
+
 function generateCourseCards(filteredCourses) {
-    const courseHTML = filteredCourses.map((course) => {
+    const courseCards = document.querySelector('#cards');
+    courseCards.innerHTML = '';
+    filteredCourses.forEach(course => {
+        const courseDiv = document.createElement('div');
         if (course.completed == true) {
-            
-            return `<div class="courseDiv"><h3 class="completed">${course.subject} ${course.number}</h3></div>`
+            courseDiv.innerHTML = `<h3 class="completed">${course.subject} ${course.number}</h3>`;
         } else {
-            return `<div class="courseDiv"><h3>${course.subject} ${course.number}</h3></div>`
+            courseDiv.innerHTML = `<h3>${course.subject} ${course.number}</h3>`;
         }
-        }
-    );
-    document.querySelector("#cards").innerHTML = courseHTML.join('');
-    const courses = document.querySelectorAll(".courseDiv");
-    courses.addEventListener('click', () => {
-        displayCourseDetails(course);
+        courseCards.appendChild(courseDiv)
+        courseDiv.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
     })
 }
+
 generateCourseCards(courses);
 credits.innerHTML = `Total credits required: ${courses.reduce(function (acc, course) {
     return acc + course.credits;
 }, 0)}`;
 
-// MODAL
+// DIALOG BOX
 const courseDetails = document.querySelector('dialog');
 
 function displayCourseDetails(course) {
     courseDetails.innerHTML = '';
     courseDetails.innerHTML = 
-    `<button class="closeButton">❌</button>
-    <h2><strong>Course: </strong>${course.subject} ${course.number}</h2>
-    <h3><strong>Title: </strong>${course.title}</h3>
+    `<div>
+    <h2>${course.subject} ${course.number}</h2>
+    <button class="closeButton">❌</button>
+    <h3>${course.title}</h3>
+    </div>
     <p><strong>Credits: </strong>${course.credits}</p>
-    <p><strong>Description: </strong>${course.description}</p>
     <p><strong>Certificate: </strong>${course.certificate}</p>
-    <p><strong>Technologies: </strong>${course.technology}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies: </strong>${course.technology.join(', ')}</p>
     `
     courseDetails.showModal();
+    courseDetails.addEventListener('click', dismiss);
 
-    closeButton.addEventListener('click', () => {
-        couseDetails.close();
+    document.querySelector('.closeButton').addEventListener('click', () => {
+        courseDetails.close();
     });
+}
+
+const dismiss = ({target:courseDetails}) => {
+    if (courseDetails.nodeName === 'DIALOG')
+        courseDetails.close('dismiss')
 }
 
 // WEATHER CARD

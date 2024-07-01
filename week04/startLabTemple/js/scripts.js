@@ -12,7 +12,6 @@ closeButton.addEventListener('click', () => dialogBox.close())
 
 function displayItems(data) {
     data.forEach(x => {
-        console.log(x)
         const photo = document.createElement('img');
         photo.src=`${url}${x.path}`;
         photo.alt=x.name
