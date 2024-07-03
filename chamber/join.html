@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap"
         rel="stylesheet">
-    <script src="scripts/index.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="images/anchor.ico">
 </head>
 
@@ -53,24 +53,25 @@
         </picture>
     </div>
     <main>
+        <h1>Join us</h1>
         <form action="thankyou.html" method="get">
             <fieldset>
                 <legend>Personal Information</legend>
                 <label>First Name <input type="text" name="first" required autocomplete="given-name" title="Your First Name"></label>
                 <label>Last Name <input type="text" name="last" required autocomplete="family-name" title="Your Last Name"></label>
-                <label>Title Within Your Organization <input type="text" name="orgTitle" autocomplete="organization-title" title="Your Title within Your Organization" pattern="[-a-zA-Z]{7,}"></label>
+                <label>Title Within Your Organization <input type="text" name="orgTitle" autocomplete="organization-title" title="Your Title within Your Organization" pattern="[a-zA-Z\-\s]{7,}"></label>
                 <label>Email <input type="email" name="email" required autocomplete="email" title="Your Email" placeholder="someone@gmail.com"></label>
-                <label>Mobile Phone Number <input type="telephone" name="phone" required autocomplete="tel-local" title="Your Mobile Phone Number"></label>
+                <label>Cell Phone Number <input type="tel" name="phone" required autocomplete="tel-local" title="Your Cell Phone Number"></label>
             </fieldset>
             <fieldset>
                 <legend>Business or Organization Information</legend>
                 <label>Business/Organization Name <input type="text" name="busName" required autocomplete="organization"></label>
                 <h3>Choose Membership Level:</h3>
-                <label><input type="radio" name="membership" title="Gold Membership" value="Gold Membership">Gold Membership <span id="goldInfo">&#9432;</span></label>
-                <label><input type="radio" name="membership" title="Silver Membership" value="Silver Membership">Silver Membership <span id="silverInfo">&#9432;</span></label>
-                <label><input type="radio" name="membership" title="Bronze Membership" value="Bronze Membership">Bronze Membership <span id="bronzeInfo">&#9432;</span></label>
-                <label><input type="radio" name="membership" title="Non-profit Membership" value="Non-profit Membership">Non-profit Membership <span id="npInfo">&#9432;</span></label>
-                <label>Business/Organization description <input type="text area" name="description" title="Description of your business or organization"></label>
+                <label><input type="radio" name="membership" required title="Gold Membership" value="Gold Membership"> Gold Membership <span id="goldInfo">&#9432;</span></label>
+                <label><input type="radio" name="membership" required title="Silver Membership" value="Silver Membership"> Silver Membership <span id="silverInfo">&#9432;</span></label>
+                <label><input type="radio" name="membership" required title="Bronze Membership" value="Bronze Membership"> Bronze Membership <span id="bronzeInfo">&#9432;</span></label>
+                <label><input type="radio" name="membership" required title="Non-profit Membership" value="Non-profit Membership"> Non-profit Membership <span id="npInfo">&#9432;</span></label>
+                <label class="businessDesc">Business/Organization description <textarea name="description" title="Description of your business or organization" rows="5" cols="35"></textarea></label>
                 <input type="hidden" name="timestamp" id="timestamp">
             </fieldset>
             <input type="submit" value="Join the Umeå Chamber of Commerce">
@@ -85,9 +86,9 @@
             <p>070-905 8763</p>
         </section>
         <div id="social">
-            <a href="#"><img src="images/facebook-icon.png" alt="Facebook icon" width="48" height="48"></a>
-            <a href="#"><img src="images/twitter-icon.png" alt="Twitter icon" width="48" height="48"></a>
-            <a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn icon" width="48" height="48"></a>
+            <a href="https://facebook.com"><img src="images/facebook-icon.png" alt="Facebook icon" width="48" height="48"></a>
+            <a href="https://twitter.com"><img src="images/twitter-icon.png" alt="Twitter icon" width="48" height="48"></a>
+            <a href="https://linkedin.com"><img src="images/linkedin-icon.png" alt="LinkedIn icon" width="48" height="48"></a>
         </div>
         <div class="wdd231">
             <p>WDD231 Class Project</p>
