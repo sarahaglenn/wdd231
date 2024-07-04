@@ -326,3 +326,54 @@ input[type=submit] {
 input[type=submit]:hover {
     cursor: pointer;
 }
+
+/* MODAL BOXES */
+
+dialog {
+    border: 1px solid #13141443;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    box-shadow: 0 0 10px;
+}
+
+dialog div {
+    display: grid;
+    grid-template-columns: auto 44px;
+    background-color: var(--lightest-color);
+    border-bottom: 1px solid gray;
+}
+dialog h3 {
+    background-color: var(--lightest-color);
+    border: none;
+    font-size: 1.2rem;
+    padding: .5rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: .4rem;
+    max-width: none;
+    color: var(--dark-color);
+}
+dialog ul {
+    list-style-type: none;
+    margin: 0 0 0 .5rem;
+}
+dialog li {
+    padding: .3rem .3rem .3rem 0;
+}
+dialog li::before {
+    content: "✅ ";
+}
+dialog p {
+    padding: .5rem .1rem .5rem .3rem;
+}
+
+::backdrop {
+    background-color: rgba(162, 162, 162, 0.695);
+}
+.closeButton {
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    padding: .3rem;
+    cursor: pointer;
+}

@@ -24,7 +24,7 @@ const dialogBox = document.querySelector('#dialog');
 const title = document.querySelector('#dialog h3');
 const closeButton = document.querySelector('#dialog button');
 const benefits = document.querySelector('#dialog ul');
-const price = document.querySelector('#dialog p');
+const price = document.querySelector('#price');
 
 
 function displayMemberships(data) {
