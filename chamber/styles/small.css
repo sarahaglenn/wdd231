@@ -327,6 +327,19 @@ input[type=submit] {
 input[type=submit]:hover {
     cursor: pointer;
 }
+#animation {
+    animation-duration: 2s;
+    animation-name: shrink;
+}
+@keyframes shrink {
+    from {
+        translate: 50vw;
+        scale: 200%;
+    }
+    to {
+        scale: 100%
+    }
+}
 
 /* MODAL BOXES */
 
