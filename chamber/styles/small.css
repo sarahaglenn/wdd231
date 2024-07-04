@@ -294,6 +294,7 @@ input[type=email]
     color: var(--dark-color)
 
 }
+
 textarea {
     display: block;
 }
