@@ -25,6 +25,7 @@ header img {
     float: left;
     margin: .25rem;
     width: 60%;
+    min-width: 150px;
 }
 
 
@@ -376,4 +377,12 @@ dialog p {
     border-radius: 3px;
     padding: .3rem;
     cursor: pointer;
+}
+
+/* THANKS PAGE */
+
+#thanks {
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 500rem;
 }

@@ -30,7 +30,7 @@ const price = document.querySelector('#price');
 function displayMemberships(data) {
     data.forEach(x => {    
     const membershipLabel = document.createElement('label');
-    membershipLabel.innerHTML = `<input type="radio" name="membership" required title="${x.level}" value="${x.level}"> ${x.level} <span id="${x.id}">&#9432;</span>`;
+    membershipLabel.innerHTML = `<input type="radio" name="membership" required title="${x.level}" value="${x.level}"> ${x.level} <span id="${x.id}"><sup>&#9432;</sup></span>`;
     options.appendChild(membershipLabel);
     const infoIcon = document.getElementById(`${x.id}`);
     infoIcon.addEventListener('click', () =>
@@ -57,3 +57,7 @@ const dismiss = ({target:dialogBox}) => {
     if (dialogBox.nodeName === 'DIALOG')
         dialogBox.close('dismiss')
 }
+
+// TIMESTAMP //
+const timestamp = document.querySelector('#timestamp');
+timestamp.value = Date.now();

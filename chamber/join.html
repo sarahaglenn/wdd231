@@ -65,7 +65,7 @@
                         pattern="[a-zA-Z\-\s]{7,}"></label>
                 <label>Email <input type="email" name="email" required autocomplete="email" title="Your Email"
                         placeholder="someone@gmail.com"></label>
-                <label>Cell Phone Number <input type="tel" name="phone" required autocomplete="tel-local"
+                <label>Cell Phone Number <input type="tel" name="phone" required autocomplete="tel"
                         title="Your Cell Phone Number"></label>
             </fieldset>
             <fieldset>
@@ -77,7 +77,6 @@
                 <label class="businessDesc">Business/Organization description <textarea name="description"
                         title="Description of your business or organization" rows="5" cols="35"></textarea></label>
                 <input type="hidden" name="timestamp" id="timestamp">
-                <!-- Dialog to show membership level details -->
                 <dialog id="dialog">
                     <div>
                         <h3></h3>
@@ -88,7 +87,7 @@
                     <p id="price"></p>
                 </dialog>
             </fieldset>
-            <input type="submit" value="Join the Umeå Chamber of Commerce">
+            <input type="submit" value="Join the Umeå Chamber of Commerce" id="submit">
         </form>
     </main>
     <footer>
