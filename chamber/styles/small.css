@@ -333,11 +333,10 @@ input[type=submit]:hover {
 }
 @keyframes shrink {
     from {
-        translate: 50vw;
-        scale: 200%;
+        transform: translate(50vw) scale(2);
     }
     to {
-        scale: 100%
+        transform: scale(1);
     }
 }
 
@@ -398,4 +397,5 @@ dialog p {
     text-align: center;
     margin: 1rem auto;
     max-width: 500rem;
+    padding: 1rem;
 }

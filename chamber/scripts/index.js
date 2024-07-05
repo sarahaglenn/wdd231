@@ -13,7 +13,6 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
-
 // Weather Info
 const currentWeather = document.querySelector('.weatherStats');
 const forecast = document.querySelector(".forecast");
@@ -41,7 +40,7 @@ async function apiFetch(url, displayFunction) {
 }
 
 // function msToTimeString(ms) {
-//     let date = Date(ms);
+//     let date = new Date(ms);
 //     let hours = date.getHours();
 //     let minutes = date.getMinutes();
 //     return `${hours}:${minutes}`;
