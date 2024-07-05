@@ -279,10 +279,10 @@ label {
     display: block;
     padding-top: .4rem;
 }
-h3 {
+form h3 {
     margin: 1.5rem 0 .2rem 0;
     font-weight: 400;
-    color: var(--medium-color)
+    color: var(--dark-color);
 }
 input[type=text],
 input[type=tel],
