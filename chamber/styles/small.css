@@ -268,11 +268,12 @@ footer {
 /* JOIN PAGE  */
 form {
     min-height: 20rem;
-    margin: 1rem;
+    margin: 1rem auto;
 }
-fieldset {
+form fieldset {
     margin-top: 1rem;
     max-width: 50rem;
+    min-width: 300px;
 }
 
 label {
@@ -315,16 +316,16 @@ input:focus {
     border-left-color:black;
 }
 input[type=submit] {
-    font-size: 1.2rem;
+    font-size: 1rem;
     border: none;
     border-radius: 10px;
     text-align: center;
     color: white;
     background: linear-gradient(var(--medium-color), var(--lighter-color));
-    /* background-color: var(--light-color); */
     box-shadow: 0 0 8px var(--dark-color);
     padding: .8rem 1.5rem;
-    margin: 2rem auto;
+    margin: 2rem;
+    max-width: 300px;
 
 }
 input[type=submit]:hover {
