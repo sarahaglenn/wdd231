@@ -13,6 +13,12 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
+const joinButton = document.querySelector('.hero button');
+joinButton.addEventListener('click', () => {
+    window.open("join.html");
+})
+
+
 // Weather Info
 const currentWeather = document.querySelector('.weatherStats');
 const forecast = document.querySelector(".forecast");
