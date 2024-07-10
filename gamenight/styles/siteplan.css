@@ -1,0 +1,78 @@
+:root {
+    --red: #D72638;
+    --gray: #8A8D91;
+    --green: #D6F6DD;
+    --black: #1E2019;
+}
+* {
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--black);
+}
+h1 {
+    font-family: "Bangers", system-ui;
+    text-align: center;
+    text-decoration: underline var(--red);
+    letter-spacing: 2px;
+}
+h2 {
+    margin: 1rem;
+    font-family: "Bangers", system-ui;
+    text-decoration: underline var(--red);
+    letter-spacing: 2px;
+}
+main p {
+    margin: 1.5rem;
+}
+table {
+    margin: 1.5rem auto;
+}
+table td {
+    border: 1px solid var(--gray);
+}
+thead td {
+    padding: 1rem;
+    border: 1px solid var(--black);
+}
+#red {
+    background-color: var(--red);
+    padding: 1rem;
+}
+#gray {
+    background-color: var(--gray);
+}
+#black {
+    background-color: var(--black);
+}
+#green {
+    background-color: var(--green);
+}
+#fonts p:first-of-type {
+    font-family: "Bangers", system-ui;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+figure {
+    float: left;
+    padding: .5rem;
+    margin: 0 auto;
+    border: solid 2px var(--green);
+}
+#wireframe {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+footer {
+    margin-top: 2rem;
+}
+footer {
+    text-align: center;
+    padding: .5rem;
+    background-color: var(--red);
+    color: var(--black);
+    font-size: 1.2rem;
+}
