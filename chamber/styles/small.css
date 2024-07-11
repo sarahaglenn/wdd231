@@ -1,6 +1,6 @@
 :root {
     --dark-color: #03045E;
-    --medium-color: #0077B6;
+    --medium-color: #016fab;
     --lighter-color: #00B4D8;
     --light-color: #90E0EF;
     --lightest-color: #CAF0F8;
@@ -196,8 +196,7 @@ hr {
     text-align: center;
     background-color: white;
     box-shadow: 2px 3px 5px 5px gray;
-    min-width: 260px;
-    max-width: 300px;
+    width: 300px;
     padding: .5em;
 }
 #cards img {
@@ -429,12 +428,18 @@ iframe {
     background-color: white;
     padding: 2rem;
     font-size: 1.2rem;
-    color: var(--medium-color);
+    color: var(--dark-color);
+    text-shadow: 1px 1px 3px var(--light-color);
     font-weight: 400;
 }
-.images figure, .attractions figure {
+.images figure, 
+.attractions figure {
     text-align: center;
     margin: 1rem 0;
+}
+
+.images figcaption {
+    padding: .4rem;
 }
 .attractions figcaption {
     font-size: .8rem;
@@ -444,7 +449,7 @@ iframe {
     max-width: 85%;
     height: auto;
     border-radius: 3px;
-    box-shadow: 1px 1px 5px rgb(43, 43, 43);
+    box-shadow: 3px 3px 5px rgba(43, 43, 43, 0.446);
 }
 .images figcaption {
     background: rgba(255, 255, 255, 0.56);
