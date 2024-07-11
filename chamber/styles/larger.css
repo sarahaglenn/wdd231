@@ -21,6 +21,11 @@
         min-height: 3em;
         align-items: center;
     }
+    #discover {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        place-items: center;
+    }
     .info {
         display: grid;
         grid-template-columns: 2fr 1.2fr 1fr;
