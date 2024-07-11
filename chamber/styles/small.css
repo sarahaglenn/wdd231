@@ -407,6 +407,10 @@ dialog p {
     border-radius: 5px;
     margin: 1rem auto;
 }
+.facts p, 
+.attractions p {
+    padding: 1rem;
+}
 .facts h3,
 .attractions h3 {
     text-align: center;
