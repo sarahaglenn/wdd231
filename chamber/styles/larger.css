@@ -16,15 +16,13 @@
     header img {
         width: 50%;
     }
+    .images img:hover {
+        opacity: .5;
+    }
     section h2 {
         display: flex;
         min-height: 3em;
         align-items: center;
-    }
-    #discover {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        place-items: center;
     }
     .info {
         display: grid;
@@ -41,6 +39,28 @@
         place-items: center;
     }
 }
+@media only screen and (min-width: 740px) {
+    #discover {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+    .sidebar {
+        margin-top: 1rem;
+        align-self: start;
+    }
+    .facts, .attractions, iframe {
+        margin: 0 auto 3.5rem auto;
+    }
+    .facts p, 
+    .attractions p {
+        padding: 1.5rem 2rem;
+    }
+    .images img {
+        max-width: 100%;
+    }
+}
+
 @media only screen and (min-width: 57rem) {
     header img {
         width: 40%;
