@@ -34,6 +34,9 @@ function display(field) {
         const day = dateObj.getDate();
         const hours = dateObj.getHours() % 12;
         let minutes = dateObj.getMinutes();
+        if (minutes < 10) {
+            minutes = '0' + minutes;
+        }
         if (dateObj.getHours() > 12) {
             minutes = minutes + 'pm';
         } else {
