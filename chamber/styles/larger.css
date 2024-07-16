@@ -16,9 +16,6 @@
     header img {
         width: 50%;
     }
-    .images img:hover {
-        opacity: .5;
-    }
     section h2 {
         display: flex;
         min-height: 3em;
@@ -59,6 +56,9 @@
     }
     .images img {
         max-width: 100%;
+    }
+    .images img:hover {
+        opacity: .5;
     }
 }
 
