@@ -1,0 +1,43 @@
+@media only screen and (min-width: 38rem) {
+    #hamButton {
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .top {
+        background-color: white;
+    }
+    nav {
+        grid-template-rows: 1fr;
+    }
+    ul.menuLinks, ul.menuLinks.open {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .heading {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        margin: 2rem;
+    }
+    #largelogo {
+        display: grid;
+    }
+    .currentFavs img {
+        width: 200px;
+        height: 200px;
+    }
+    .currentFavs img:hover {
+
+        opacity: .5;
+    }
+    .currentFavs figcaption {
+        font-size: 1.2rem;
+        margin: .5rem;
+    }
+    .overlay {
+        max-width: 400px;
+    }
+}
