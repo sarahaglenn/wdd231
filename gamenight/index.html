@@ -31,35 +31,42 @@
 
 <body>
     <header>
-        <img src="images/logo600x200.png" alt="Game Night logo" width="600" height="200">
-        <nav id="animate">
+        <div class="top">
+            <img src="images/logo600x200.png" alt="Game Night logo" width="300" height="100">
             <button id="hamButton" aria-label="Menu Button"></button>
+        </div>
+        <nav id="animate">
             <ul class="menuLinks">
-                <li><a href="index.html" title="home">Home</a></li>
+                <li class="active"><a href="index.html" title="home">Home</a></li>
                 <li><a href="games.html" title="games">Games</a></li>
                 <li><a href="benefits.html" title="benefits">Benefits</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <img src="images/logo500.webp" alt="Game Night logo" width="500" height="500">
-        <p class="standout">Everyone likes playing games because it's fun and entertaining, but did you know that playing games actually improves your life in these specific ways? Playing games ...</p>
-        <a href="benefits.html">Read more</a>
+        <img id="largelogo" src="images/logo500.webp" alt="Game Night logo" width="500" height="500">
+        <p class="standout">Everyone likes playing games because it's fun and entertaining, but did you know that playing games actually improves your life in these specific ways? Playing games ...<a href="benefits.html">Read more</a></p>
         <section class="currentFavs">
+            <h2>Some of our current favorites...</h2>
+            <div class="favGames"></div>
         </section>
         <hr>
-        <img src="images/familygame400x270.webp" alt="Family playing card game" width="400" height="270">
-        <p>At Game Night Inc., we find all the best games and put them together in a list with all the best stuff about doing xyz and then we give it to you with the instructions and what you need so that you can have an awesome game night with minimal work.</p>
-        <section class="standout">
-            <p>want to see our most recently reviewed games?</p>
+        <div class="family">
+            <img src="images/familygame400x270.webp" alt="Family playing card game" width="400" height="270" loading="lazy">
+            <p class="overlay">At Game Night Inc., we try all the recommended games and teach you how to play them. The next time you're hanging out with your favorite people and need a quick game idea, we're here to help! All the fun and none of the work.</p>
+        </div>
+        <div class="newsletter">
+            <p>Do you want to see our most recently reviewed games?</p>
             <p>Sign up for our newsletter and have them sent straight to your inbox!</p>
             <button class="signup">Sign me up!</button>
-        </section>
+        </div>
     </main>
     <footer>
-        <p>Game Night Inc.</p>
-        <p>&copy; <span id="currentyear"></span> Sarah Glenn</p>
-        <span id="lastModified"></span>
+        <div class="contact">
+            <p>Game Night Inc.</p>
+            <p>&copy; <span id="currentyear"></span> Sarah Glenn</p>
+            <span id="lastModified"></span>
+        </div>
         <div id="social">
             <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" width="48" height="48"></a>
             <a href="https://gmail.com"><img src="images/gmail.png" alt="Twitter icon" width="48" height="48"></a>
