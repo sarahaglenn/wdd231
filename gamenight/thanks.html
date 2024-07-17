@@ -45,56 +45,9 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="heading">
-            <h1>Create lasting memories with your friends and family</h1>
-            <img id="playing" src="images/playing350x230.webp" alt="Group playing a board game" width="350"
-                height="230">
-        </div>
-        <p class="standout">Everyone likes playing games because they're fun and entertaining, but did you know that
-            playing games actually improves your mental and social health? Most games require concentration, patience,
-            team work, and ...<a href="benefits.html" title="benefits">Read more about benefits</a></p>
-        <section class="currentFavs">
-            <h2>Some of our current favorites...</h2>
-            <div class="favGames"></div>
-            <dialog id="favDialog">
-                <div>
-                  <h2>Game Name</h2>
-                  <button>X</button>
-                </div>
-                <p id="goal">Game goal</p>
-                <p id="numPlayers">Number of Players</p>
-            </dialog>
-        </section>
-        <hr>
-        <div class="family">
-            <img src="images/familygame400x270.webp" alt="Family playing card game" width="400" height="270"
-                loading="lazy">
-            <p class="overlay">At Game Night Inc., we try all the recommended games and teach you how to play them. The
-                next time you're hanging out with your favorite people and need a quick game idea, we're here to help!
-                All the fun and none of the work.</p>
-        </div>
-        <div class="newsletter">
-            <p>Do you want to see our most recently reviewed games?</p>
-            <p>Sign up for our newsletter and have them sent straight to your inbox!</p>
-            <button class="signup">Sign me up!</button>
-            <dialog>
-                <div>
-                    <h2>Newsletter Sign Up</h2>
-                    <button>X</button>
-                </div>
-                <form method="get" action="thanks.html">
-                    <fieldset>
-                        <legend>Contact Information</legend>
-                        <label>First Name*<input type="text" name="name" required autocomplete="given-name"
-                            title="Your First Name"></label>
-                        <label>Email*<input type="email" name="email" autocomplete="email" placeholder="someone@gmail.com" required title="Your Email"></label>
-                        <input type="hidden" name="timestamp" id="timestamp">
-                    </fieldset>
-                    <input type="submit" id="submitBtn" value="Subscribe to Game Night News">
-                </form>
-            </dialog>
-        </div>
+    <main id="thanks">
+        <h1>Thank you!</h1>
+        <div id="results"></div>
     </main>
     <footer>
         <div class="contact">
@@ -110,7 +63,7 @@
                     height="48"></a>
         </div>
     </footer>
-    <script src="scripts/gamenight.js"></script>
+    <script src="scripts/thanks.js"></script>
 </body>
 
 </html>

@@ -76,3 +76,26 @@ const dismiss = ({target:dialogBox}) => {
 }
 
 getGameData(filename);
+
+// NEWSLETTER BUTTON AND DIALOG BOX //
+const signupButton = document.querySelector(".signup");
+
+signupButton.addEventListener('click', () => {
+    signupBox.showModal();
+    signupBox.addEventListener('click', dismiss);
+});
+
+const submitButton = document.getElementById("submitBtn");
+const signupBox = document.querySelector(".newsletter dialog");
+const closeBtn = document.querySelector(".newsletter dialog button");
+closeBtn.addEventListener('click', () => signupBox.close())
+
+const thanks = document.querySelector("#thanksMsg");
+if (thanks) {
+    thanks.innerHTML = `${localStorage.fname}, thank you for subscribing to the Game Night Newsletter!`;
+}
+// TIMESTAMP //
+const timestamp = document.querySelector('#timestamp');
+if (timestamp) {
+    timestamp.value = Date.now();
+}
