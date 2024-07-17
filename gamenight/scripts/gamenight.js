@@ -65,7 +65,11 @@ const shuffleArray = array => {
 function showStuff(game) {
     title.innerHTML = game.name;
     goal.innerHTML = `<strong>Goal: </strong> ${game.goal}`;
-    numPlayers.innerHTML = `<strong>Players: </strong> ${game.minPlayers} - ${game.maxPlayers}`;
+    if (game.minPlayers === game.maxPlayers) {
+        numPlayers.innerHTML = `<strong>Players: </strong> ${game.minPlayers}`;
+    } else {
+        numPlayers.innerHTML = `<strong>Players: </strong> ${game.minPlayers} - ${game.maxPlayers}`;
+    }
     dialogBox.showModal();
     dialogBox.addEventListener('click', dismiss);
 }
