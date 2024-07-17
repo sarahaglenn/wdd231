@@ -29,10 +29,6 @@
         width: 150px;
         height: 150px;
     }
-    .currentFavs img:hover {
-
-        opacity: .5;
-    }
     .currentFavs figcaption {
         font-size: 1.2rem;
         margin: .5rem;

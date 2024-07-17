@@ -16,6 +16,15 @@ hamButton.addEventListener('click', () => {
 const favs = document.querySelector(".favGames");
 const filename = 'data/games.json';
 
+
+const dialogBox = document.querySelector('#favDialog');
+const title = document.querySelector('#favDialog h2');
+const goal = document.querySelector('#goal');
+const closeButton = document.querySelector('#favDialog button');
+const numPlayers = document.querySelector('#numPlayers');
+
+closeButton.addEventListener('click', () => dialogBox.close())
+
 async function getGameData() {
     const response = await fetch(filename);
     if (response.ok) {
@@ -39,6 +48,7 @@ const displayFavorites = (games) => {
             <img src="${game.image}" alt="Picture of ${game.name}" width="200" height="200" loading="lazy">
             <figcaption>${game.name}</figcaption>
         </figure>`;
+        figure.addEventListener('click', () => showStuff(game));
         favs.appendChild(figure);
     });
 }
@@ -52,4 +62,17 @@ const shuffleArray = array => {
     }
     return array;
 }
+function showStuff(game) {
+    title.innerHTML = game.name;
+    goal.innerHTML = `<strong>Goal: </strong> ${game.goal}`;
+    numPlayers.innerHTML = `<strong>Players: </strong> ${game.minPlayers} - ${game.maxPlayers}`;
+    dialogBox.showModal();
+    dialogBox.addEventListener('click', dismiss);
+}
+
+const dismiss = ({target:dialogBox}) => {
+    if (dialogBox.nodeName === 'DIALOG')
+        dialogBox.close('dismiss')
+}
+
 getGameData(filename);
