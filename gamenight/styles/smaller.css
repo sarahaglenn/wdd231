@@ -79,7 +79,7 @@ nav ul {
 nav.open {
     grid-template-rows: 1fr;
 }
-#largelogo {
+.heading img {
     display: none;
 }
 h2, h1 {
@@ -91,6 +91,9 @@ h2, h1 {
     padding: 2rem;
     background-color: var(--green);
 }
+p, span {
+    font-size: 1.2rem;
+}
 .favGames {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -100,7 +103,7 @@ h2, h1 {
     margin: 2rem;
 }
 .currentFavs figure {
-    margin: 1rem;
+    margin: 1rem 0;
 }
 .currentFavs img {
     width: 100px;
@@ -116,22 +119,21 @@ hr {
     margin-top: 3rem;
     position: relative;
     min-height: 350px;
+    text-align: center;
 }
-.family img {
+.family img,
+.heading img {
     border: 3px solid var(--red);
     box-shadow: 5px 5px 10px var(--gray);
+    margin-bottom: 1rem;
 }
 .overlay {
     background-color: #e6e6eac8;
-    position: absolute;
-    top: 60%;
-    left: 40%;
     padding: .5rem;
     box-shadow: 5px 5px 10px var(--gray);
 }
 .newsletter {
     text-align: center;
-    font-size: 1.1rem;
 }
 .newsletter p {
     padding: .3rem;

@@ -22,12 +22,12 @@
         place-items: center;
         margin: 2rem;
     }
-    #largelogo {
+    .heading img {
         display: grid;
     }
     .currentFavs img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
     .currentFavs img:hover {
 
@@ -39,5 +39,24 @@
     }
     .overlay {
         max-width: 400px;
+        position: absolute;
+        top: 60%;
+        left: 40%;
+    }
+
+}
+@media only screen and (min-width: 1140px) {
+    .currentFavs img {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media only screen and (min-width: 60rem) {
+    body {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .family {
+        text-align: center;
     }
 }
