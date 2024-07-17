@@ -26,7 +26,7 @@
         place-items: center;
         margin: 2rem;
     }
-    .heading img {
+    #playing {
         display: grid;
     }
     .currentFavs img {

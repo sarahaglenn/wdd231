@@ -79,7 +79,7 @@ nav ul {
 nav.open {
     grid-template-rows: 1fr;
 }
-.heading img {
+#playing {
     display: none;
 }
 h2, h1 {
@@ -126,7 +126,7 @@ hr {
     text-align: center;
 }
 .family img,
-.heading img {
+#playing {
     border: 3px solid var(--red);
     box-shadow: 5px 5px 10px var(--gray);
     margin-bottom: 1rem;
