@@ -43,6 +43,9 @@
         top: 60%;
         left: 40%;
     }
+    .filters {
+        place-content: center;
+    }
     #cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
