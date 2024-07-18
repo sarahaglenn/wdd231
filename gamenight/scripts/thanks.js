@@ -1,10 +1,7 @@
-// FOOTER DETAILS //
-const today = new Date();
-const year = document.querySelector("#currentyear");
-const modified = document.querySelector("#lastModified");
+import {year, today, modified} from "../modules/datesandweather.js";
 
 year.innerHTML = today.getFullYear();
-modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-UK",{dateStyle: "short"}).format(today)}`;
+modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-US",{dateStyle: "short"}).format(today)}`;
 
 // MENU ANIMATION //
 const hamButton = document.querySelector('#hamButton');
@@ -51,9 +48,9 @@ const results = document.querySelector('#results');
 results.innerHTML = `
 <p>${display('name')}, we're excited you've joined our community!</p>
 <br>
-<p>Follow @GameNightInc on Instagram and Facebook for more game night tips and recommendations.</p>
+<p>Follow <strong>@GameNightInc </strong> on Instagram and Facebook for more game night tips and recommendations.</p>
 <br>
-<h4>Subscription Confirmation</h4>
+<h4>Subscription Confirmation:</h4>
 <p>Your Email: <a href=mailto:"${display('email')}">${display('email')}</a></p>
 <p>${display('timestamp')}<p/>
 <br>`;

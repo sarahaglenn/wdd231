@@ -1,9 +1,7 @@
-const today = new Date();
-const year = document.querySelector("#currentyear");
-const modified = document.querySelector("#lastModified");
+import {year, today, modified} from "../modules/datesandweather.js";
 
 year.innerHTML = today.getFullYear();
-modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-UK",{dateStyle: "short"}).format(today)}`;
+modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-US",{dateStyle: "short"}).format(today)}`;
 
 const hamButton = document.querySelector('#hamButton');
 const navLinks = document.querySelector('#animate');

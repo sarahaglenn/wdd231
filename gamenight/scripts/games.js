@@ -1,9 +1,7 @@
-const today = new Date();
-const year = document.querySelector("#currentyear");
-const modified = document.querySelector("#lastModified");
+import {year, today, modified} from "../modules/datesandweather.js";
 
 year.innerHTML = today.getFullYear();
-modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-UK",{dateStyle: "short"}).format(today)}`;
+modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-US",{dateStyle: "short"}).format(today)}`;
 
 const hamButton = document.querySelector('#hamButton');
 const navLinks = document.querySelector('#animate');
@@ -39,7 +37,7 @@ const displayGames = (games) => {
         let goal = document.createElement('p');
         let numPlayers = document.createElement('p');
         let ages = document.createElement('p');
-        const suites = ["♥️","♠️","♦️","♣️"];
+        const suites = ["♥️","♦️","♠️","♣️"];
         suite1.textContent = suites[Math.floor(Math.random() * suites.length)];
         suite2.textContent = suite1.textContent;
         name.textContent = `${game.name}`;
