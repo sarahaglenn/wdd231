@@ -311,3 +311,7 @@ footer {
 #cards.list section:nth-child(odd) {
     background-color: var(--green);
 }
+#visits p {
+    padding: 1rem;
+    text-align: center;
+}

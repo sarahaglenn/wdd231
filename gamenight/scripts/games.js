@@ -65,6 +65,7 @@ const displayGames = (games) => {
         card.appendChild(ages);
         card.appendChild(suite2);
         cards.appendChild(card);
+        card.addEventListener('click', () => showStuff(game));
     });
 }
 // toggle between grid and list view
@@ -161,3 +162,45 @@ function clearClassesOnButtons() {
 }
 
 filterGames(filename);
+
+// NUMBER OF VISITS DATA //
+const visitMsg = document.querySelector('#visits p');
+const msToDays = 86400000;
+if (localStorage.lastVisit) {
+    const currentDate = Date.now();
+    let lastVisit = localStorage.lastVisit;
+    const numDays = (currentDate - lastVisit) / msToDays;
+    if ( numDays < 1) {
+        visitMsg.innerHTML = "Wow, thanks for being here again!"
+    } else if (numDays.toFixed(0) == 1) {
+        visitMsg.innerHTML = `You last visited 1 day ago.`
+    } else {
+        visitMsg.innerHTML = `You last visited ${numDays.toFixed(0)} days ago.`
+    }
+} else {
+    visitMsg.innerHTML = "Welcome! We hope you find just the game you're looking for."
+}
+localStorage.setItem("lastVisit", Date.now());
+
+// DIALOG BOXES FOR GAME INSTRUCTIONS //
+
+const dialogBox = document.querySelector('dialog');
+const title = document.querySelector('dialog h3');
+const goal = document.querySelector('dialog h4');
+const rules = document.querySelector('dialog p');
+const closeButton = document.querySelector('dialog button');
+
+closeButton.addEventListener('click', () => dialogBox.close())
+
+function showStuff(game) {
+    title.innerHTML = game.name;
+    goal.innerHTML = `<strong>Goal: </strong> ${game.goal}`;
+    rules.innerHTML  = `<strong>Rules: </strong> ${game.instructions.join('<br><br>')}`;
+    dialogBox.showModal();
+    dialogBox.addEventListener('click', dismiss);
+}
+
+const dismiss = ({target:dialogBox}) => {
+    if (dialogBox.nodeName === 'DIALOG')
+        dialogBox.close('dismiss')
+}
