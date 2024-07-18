@@ -373,3 +373,6 @@ h4 {
 .weatherStats p {
     margin: .5rem;
 }
+.sources li {
+    margin-left: 2rem;
+}
