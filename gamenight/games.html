@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Directory</title>
+    <meta name="description" content="Directory of games from Game Night Inc.">
+    <meta name="author" content="Sarah Glenn">
+    <meta property="og:title" content="Game Night">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://sarahaglenn.github.io/wdd231/gamenight/images/logo600x200.png"> 
+    <meta property="og:image:alt" content="Game Night Inc. logo">
+    <meta property="og:url" content="https://sarahaglenn.github.io/wdd231/gamenight/">
+    <meta property="og:description" content="Directory of games from Game Night Inc.">
+    <meta property="og:site_name" content="Game Night">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="Game Night">
+    <meta name="twitter:title" content="Game Night">
+    <meta name="twitter:description" content="Directory of games from Game Night Inc.">
+    <meta name="twitter:image" content="https://sarahaglenn.github.io/wdd231/gamenight/images/logo600x200.png">
+    <meta name="twitter:image:alt" content="Game Night Inc. logo">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/smaller.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <img src="images/logo600x200.png" alt="Game Night logo" width="300" height="100">
+            <button id="hamButton" aria-label="Menu Button"></button>
+        </div>
+        <nav id="animate">
+            <ul class="menuLinks">
+                <li><a href="index.html" title="home">Home</a></li>
+                <li class="active"><a href="games.html" title="games">Games</a></li>
+                <li><a href="benefits.html" title="benefits">Benefits</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Check out our Game Directory</h1>
+        <p>Whether you're looking for a game for a large group, something a few people can plan outside, or a rainy day game for two, you're sure to find a game you'll love. Enjoy looking through our collection of games. </p>
+        <div class="menu">
+            <button id="view">&#9776;</button>
+        </div>
+        <button id="all" class="filter">All</button>
+        <button id="card">🂡 Card Games</button>
+        <button id="outdoor">☀️ Outdoor Games</button>
+        <button id="party">🎉 Party Games</button>
+        <button id="lgGroup"> Large Group Games</button>
+        <button id="young">Best for Young Kids</button>
+        <div id="cards"></div>
+        <div id="visits">
+            <p>Welcome!</p>
+        </div>
+        <p>Come back soon! We add more games all the time. Your new favorite might be waiting for you.</p>
+    </main>
+    <footer>
+        <div class="contact">
+            <p>Game Night Inc.</p>
+            <p>&copy; <span id="currentyear"></span> Sarah Glenn</p>
+            <span id="lastModified"></span>
+        </div>
+        <div id="social">
+            <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon" width="48"
+                    height="48"></a>
+            <a href="https://gmail.com"><img src="images/gmail.png" alt="Twitter icon" width="48" height="48"></a>
+            <a href="https://instagram.com"><img src="images/instagram.png" alt="LinkedIn icon" width="48"
+                    height="48"></a>
+        </div>
+    </footer>
+    <script src="scripts/games.js"></script>
+</body>
+
+</html>

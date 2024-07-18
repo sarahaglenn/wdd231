@@ -216,3 +216,86 @@ footer {
 #social img {
     margin: .4rem;
 }
+
+/* GAME DIRECTORY  */
+.menu button {
+    margin: .5em;
+    font-size: 2em;
+    padding: .1em;
+    min-width: 50px;
+}
+
+#cards section {
+    border-radius: 10px;
+    margin: .75em auto;
+    place-content: center;
+    text-align: center;
+    box-shadow: 2px 3px 5px 5px gray;
+    width: 250px;
+    height: 325px;
+    padding: .5em;
+    position: relative;
+    border: 2px solid var(--black);
+}
+#top-left {
+    text-align: left;
+    position: absolute;
+    top: 10px;
+}
+#bottom-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+#numPlayers, 
+#ages {
+    display: none;
+}
+#cards img {
+    height: 120px;
+    width: auto;
+    box-shadow: 2px 3px 5px 2px rgb(182, 181, 181);
+    border-radius: 3px;
+    border: 1px solid var(--red);
+    margin: .7rem;
+}
+.list #numPlayers, 
+.list #ages {
+    display: block;
+}
+
+#cards.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+#cards.list section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    margin: 0;
+    padding: .25rem 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0%;
+    margin: .5em auto;
+    min-width: 100%;
+    max-height: 200px;
+    align-items: center;
+}
+.list #top-left,
+.list #bottom-right {
+    display: none;
+}
+
+#cards.list section > * {
+    margin: 0 1rem;
+}
+#cards.list section img {
+    display: none;
+}
+#cards.list section h3 {
+    font-size: 1rem;
+}
+#cards.list section:nth-child(even) {
+    background-color: #03055e1d;
+}

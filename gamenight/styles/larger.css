@@ -43,6 +43,11 @@
         top: 60%;
         left: 40%;
     }
+    #cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 10px;
+    }
 
 }
 @media only screen and (min-width: 1140px) {
