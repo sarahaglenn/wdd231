@@ -224,6 +224,18 @@ footer {
     padding: .1em;
     min-width: 50px;
 }
+.filters {
+    display: flex;
+}
+.filters button {
+    padding: .5rem;
+    margin: .5rem .2rem;
+    border-color: var(--red);
+    box-shadow: 1px 1px 4px var(--gray);
+}
+.filters button:hover {
+    opacity: 50%;
+}
 
 #cards section {
     border-radius: 10px;
