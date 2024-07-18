@@ -1,4 +1,6 @@
-import {year, today, modified} from "../modules/datesandweather.js";
+const today = new Date();
+const year = document.querySelector("#currentyear");
+const modified = document.querySelector("#lastModified");
 
 year.innerHTML = today.getFullYear();
 modified.innerHTML = `Last modified: ${new Intl.DateTimeFormat("en-US",{dateStyle: "short"}).format(today)}`;
@@ -155,8 +157,8 @@ young.addEventListener('click', () => {
 
 
 function clearClassesOnButtons() {
-    buttons = document.querySelectorAll("button");
-    buttons.forEach(button => button.className='');
+    buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => button.className='');
 }
 
 filterGames(filename);
