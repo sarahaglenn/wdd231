@@ -25,9 +25,6 @@
         place-items: center;
         margin: 2rem;
     }
-    #playing {
-        display: grid;
-    }
     .currentFavs img {
         width: 150px;
         height: 150px;
@@ -49,6 +46,30 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-gap: 10px;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 270px 1fr;
+        grid-gap: 20px;
+    }
+    .sidebar {
+        min-width: 200px;
+        max-width: 270px;
+        margin-top: 8rem;
+        max-height: 500px;
+        place-content: center;
+        position: sticky;
+        top: 20%;
+        align-self: flex-start;
+    }
+    .benefits {
+        margin-top: 5rem;
+        order: 1;
+        width: 100%;
+        grid-column: 2/3;
+    }
+    footer {
+        margin-top: 2rem;
     }
 
 }

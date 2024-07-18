@@ -44,9 +44,6 @@ async function apiFetch(location) {
     }
 }
 
-
-
-
 function displayCurrentWeather(data) {
     currentWeather.innerHTML = "";
     const temp = document.createElement('p');
@@ -66,10 +63,8 @@ function displayCurrentWeather(data) {
     description.setAttribute('id', 'desc');
     temp.setAttribute('id', 'temp');
     highandlow.innerHTML = `High: <strong>${Math.round(data.main.temp_max)}°C</strong> Low: <strong>${Math.round(data.main.temp_min)}°C</strong>`;
-    // low.innerHTML = `Low: <strong>${Math.round(data.main.temp_min)}°C</strong>`;
     currentWeather.appendChild(temp);
     currentWeather.appendChild(description);
     currentWeather.appendChild(weatherIcon);
     currentWeather.appendChild(highandlow);
-    // currentWeather.appendChild(low);
 }
