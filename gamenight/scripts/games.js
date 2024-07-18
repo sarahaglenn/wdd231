@@ -22,12 +22,12 @@ async function getGameData() {
     const response = await fetch(filename);
     if (response.ok) {
         const data = await response.json()
-        displayGames(data.games);
+        return data.games;
     }
 }
-getGameData();
 
 const displayGames = (games) => {
+    cards.innerHTML = "";
     games.forEach((game) => {
         let card = document.createElement('section');
         let suite1 = document.createElement('p');
@@ -80,3 +80,84 @@ viewButton.addEventListener('click', () => {
         viewButton.innerHTML = `&#5010&#5010&#5010`;
     }
 });
+
+// FILTERING GAMES //
+
+// buttons
+const all = document.querySelector('#all');
+const card = document.querySelector('#card');
+const outdoor = document.querySelector('#outdoor');
+const party = document.querySelector('#party');
+const group = document.querySelector('#lgGroup');
+const young = document.querySelector('#young');
+
+// MATCHING FILTER //
+const filterGames = async (filter = "all") => {
+    let games = await getGameData(filename);
+        switch (filter) {
+            case "card":
+                games = games.filter((game) => game.type === "card");
+                break;
+            case "outdoor":
+                games = games.filter((game) => game.type === "outdoor");
+                break;
+            case "party":
+                games = games.filter((game) => game.type === "party");
+                break;
+            case "group":
+                games = games.filter((game) => game.maxPlayers === "many" || game.maxPlayers >= 10);
+                break;
+            case "young":
+                games = games.filter((game) => game.ages[0] === "under 6");
+                break;
+            default:
+                break;
+        }
+        displayGames(games);
+};
+
+
+// button listeners
+all.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("all");
+    all.classList.add("active");
+});
+
+card.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("card");
+    card.classList.add("active");
+});
+
+outdoor.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("outdoor");
+    outdoor.classList.add("active");
+});
+
+party.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("party");
+    party.classList.add("active");
+});
+
+group.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("group");
+    group.classList.add("active");
+});
+
+young.addEventListener('click', () => {
+    clearClassesOnButtons();
+    filterGames("young");
+    young.classList.add("active");
+});
+
+
+function clearClassesOnButtons() {
+    buttons = document.querySelectorAll("button");
+    buttons.forEach(button => button.className='');
+}
+
+filterGames(filename);

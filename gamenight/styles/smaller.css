@@ -293,9 +293,6 @@ footer {
 #cards.list section img {
     display: none;
 }
-#cards.list section h3 {
-    font-size: 1rem;
-}
-#cards.list section:nth-child(even) {
-    background-color: #03055e1d;
+#cards.list section:nth-child(odd) {
+    background-color: var(--green);
 }
