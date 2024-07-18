@@ -1,17 +1,6 @@
 {
     "games": [
         {
-            "name": "Cheat",
-            "type": "card",
-            "image": "images/cheat200.webp",
-            "goal": "Get rid of your hand by playing all your cards.",
-            "instructions": ["Evenly deal cards to all players.", "The player left of the dealer begins by stating how many Aces they will be putting face down in the middle of the game play area.", "Play moves clockwise and the rank for the turn increases to 2 and so on.", "Players have to lay down at least one card even if they do not have the specific rank in their hand. For example, if the rank a player must lay down is a 5 and they have no 5s, they can secretly lay down a Queen and a Jack and say they are laying down two 5s.", "Before the next player lays down their cards, anyone who thinks the current player is lying can say “Cheat”. If the player was lying, they must take all of the cards in the middle and add them to their hand. If the player was telling the truth, the player who said “Cheat” must take all of the card in the middle."],
-            "minPlayers": 3,
-            "maxPlayers": 13,
-            "ages": ["Under 6", "6-12yrs", "teens", "adults"],
-            "supplies": ["standard deck of cards"]
-        },
-        {
             "name": "Egyptian Rat Race",
             "type": "card",
             "image": "images/egyptian200.webp",
@@ -21,6 +10,17 @@
             "maxPlayers": 6,
             "ages": [ "6-12yrs", "teens", "adults"],
             "supplies": ["standard deck of cards"]
+        },
+        {
+            "name": "The Name Game",
+            "type": "party",
+            "image": "images/namegame200.webp",
+            "goal": "Get points for your team by guessing the correct name.",
+            "instructions": ["Give each player three slips of paper and have them write names of people or characters. Put all papers in a hat or bowl. Split the group into two teams.","To play, a player from the first team stands in front of the group and draws a name from the hat. They give clues, without saying the name, to get the members of their team to guess the name. Their team gets one point for each correctly guessed name in 20 seconds. Play alternates between the two teams until all the names have been guessed.","For the second round, the names are put back into the hat and teams take turns having one person draw a name from the hat while the rest of the team tries to guess the name. For this round, the person drawing names cannot say anything, but has to act out the name they've drawn. Points from this round are added to the previous round and then all the names are put back into the hat.","For the final round, team members take turns giving a one-word clue with their back to the rest of the players while their team guesses. Points are added to the scores from the previous rounds and the team with the highest score wins."],
+            "minPlayers": 2,
+            "maxPlayers": "many",
+            "ages": [ "6-12yrs", "teens", "adults"],
+            "supplies": ["small pieces of paper", "pens"]
         },
         {
             "name": "Golf",
@@ -34,6 +34,17 @@
             "supplies": ["standard deck of cards"]
         },
         {
+            "name": "Lemon Race",
+            "type": "outdoor",
+            "image": "images/lemonrace200.webp",
+            "goal": "Be the first person to cross the finish line with your lemon.",
+            "instructions": ["Draw a start line and finish line. Give each player a spoon and a lemon. Instruct players to place the spoon handle in their mouth and balance the lemon on it.","When the race official says \"start\", players race toward the finish line. If a player drops their lemon, they must start over from the starting line.","The first player to cross the finish line with their lemon on their spoon wins."],
+            "minPlayers": 2,
+            "maxPlayers": "many",
+            "ages": ["under 6","6-12yrs", "teens", "adults"],
+            "supplies": ["one spoon per player", "one lemon per player"]
+        },
+        {
             "name": "Spit",
             "type": "card",
             "image": "images/spit200.webp",
@@ -43,6 +54,17 @@
             "maxPlayers": 2,
             "ages": [ "6-12yrs", "teens", "adults"],
             "supplies": ["standard deck of cards"]
+        },
+        {
+            "name": "Hide and Seek",
+            "type": "outdoor",
+            "image": "images/hideandseek200.webp",
+            "goal": "Be the last person found.",
+            "instructions": ["Select on person to be the seeker. This person stands away from the hiding areas and loudly counts to 30. While the seeker is counting, the other players get into hiding spots.","After counting, the seeker begins looking for the players in hiding.","The first person found becomes the seeker for the next round."],
+            "minPlayers": 3,
+            "maxPlayers": "many",
+            "ages": ["under 6", "6-12yrs", "teens", "adults"],
+            "supplies": ["none"]
         },
         {
             "name": "Spoons",
@@ -65,6 +87,17 @@
             "maxPlayers": "many",
             "ages": [ "6-12yrs", "teens", "adults"],
             "supplies": ["stack of sticky notes", "pens"]
+        },
+        {
+            "name": "Cheat",
+            "type": "card",
+            "image": "images/cheat200.webp",
+            "goal": "Get rid of your hand by playing all your cards.",
+            "instructions": ["Evenly deal cards to all players.", "The player left of the dealer begins by stating how many Aces they will be putting face down in the middle of the game play area.", "Play moves clockwise and the rank for the turn increases to 2 and so on.", "Players have to lay down at least one card even if they do not have the specific rank in their hand. For example, if the rank a player must lay down is a 5 and they have no 5s, they can secretly lay down a Queen and a Jack and say they are laying down two 5s.", "Before the next player lays down their cards, anyone who thinks the current player is lying can say “Cheat”. If the player was lying, they must take all of the cards in the middle and add them to their hand. If the player was telling the truth, the player who said “Cheat” must take all of the card in the middle."],
+            "minPlayers": 3,
+            "maxPlayers": 13,
+            "ages": ["Under 6", "6-12yrs", "teens", "adults"],
+            "supplies": ["standard deck of cards"]
         },
         {
             "name": "Charades",
@@ -96,39 +129,6 @@
             "instructions": ["Have all players stand close together and grab the hand of someone not next to them.","Without letting go of hands, climb over, under, or through other people to \"untie\" the knot.","The game is finished when the whole group can stand in a circle with no arms crossed."],
             "minPlayers": 4,
             "maxPlayers": 20,
-            "ages": ["under 6", "6-12yrs", "teens", "adults"],
-            "supplies": ["none"]
-        },
-        {
-            "name": "The Name Game",
-            "type": "party",
-            "image": "images/namegame200.webp",
-            "goal": "Get points for your team by guessing the correct name.",
-            "instructions": ["Give each player three slips of paper and have them write names of people or characters. Put all papers in a hat or bowl. Split the group into two teams.","To play, a player from the first team stands in front of the group and draws a name from the hat. They give clues, without saying the name, to get the members of their team to guess the name. Their team gets one point for each correctly guessed name in 20 seconds. Play alternates between the two teams until all the names have been guessed.","For the second round, the names are put back into the hat and teams take turns having one person draw a name from the hat while the rest of the team tries to guess the name. For this round, the person drawing names cannot say anything, but has to act out the name they've drawn. Points from this round are added to the previous round and then all the names are put back into the hat.","For the final round, team members take turns giving a one-word clue with their back to the rest of the players while their team guesses. Points are added to the scores from the previous rounds and the team with the highest score wins."],
-            "minPlayers": 2,
-            "maxPlayers": "many",
-            "ages": [ "6-12yrs", "teens", "adults"],
-            "supplies": ["small pieces of paper", "pens"]
-        },
-        {
-            "name": "Lemon Race",
-            "type": "outdoor",
-            "image": "images/lemonrace200.webp",
-            "goal": "Be the first person to cross the finish line with your lemon.",
-            "instructions": ["Draw a start line and finish line. Give each player a spoon and a lemon. Instruct players to place the spoon handle in their mouth and balance the lemon on it.","When the race official says \"start\", players race toward the finish line. If a player drops their lemon, they must start over from the starting line.","The first player to cross the finish line with their lemon on their spoon wins."],
-            "minPlayers": 2,
-            "maxPlayers": "many",
-            "ages": ["under 6","6-12yrs", "teens", "adults"],
-            "supplies": ["one spoon per player", "one lemon per player"]
-        },
-        {
-            "name": "Hide and Seek",
-            "type": "outdoor",
-            "image": "images/hideandseek200.webp",
-            "goal": "Be the last person found.",
-            "instructions": ["Select on person to be the seeker. This person stands away from the hiding areas and loudly counts to 30. While the seeker is counting, the other players get into hiding spots.","After counting, the seeker begins looking for the players in hiding.","The first person found becomes the seeker for the next round."],
-            "minPlayers": 3,
-            "maxPlayers": "many",
             "ages": ["under 6", "6-12yrs", "teens", "adults"],
             "supplies": ["none"]
         },

@@ -236,6 +236,7 @@ footer {
 }
 .filters button:hover {
     opacity: 50%;
+    cursor: pointer;
 }
 
 #cards section {
@@ -249,6 +250,10 @@ footer {
     padding: .5em;
     position: relative;
     border: 2px solid var(--black);
+}
+#cards section 
+#cards section:hover {
+    cursor: pointer;
 }
 #top-left {
     text-align: left;
@@ -310,6 +315,15 @@ footer {
 }
 #cards.list section:nth-child(odd) {
     background-color: var(--green);
+}
+h3 {
+    font-family: "Bangers", system-ui;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+h4 {
+    text-align: center;
+    margin: .75rem;
 }
 #visits p {
     padding: 1rem;

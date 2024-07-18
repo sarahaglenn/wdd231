@@ -171,7 +171,7 @@ if (localStorage.lastVisit) {
     let lastVisit = localStorage.lastVisit;
     const numDays = (currentDate - lastVisit) / msToDays;
     if ( numDays < 1) {
-        visitMsg.innerHTML = "Wow, thanks for being here again!"
+        visitMsg.innerHTML = "Welcome back, we're glad you like it here!"
     } else if (numDays.toFixed(0) == 1) {
         visitMsg.innerHTML = `You last visited 1 day ago.`
     } else {
